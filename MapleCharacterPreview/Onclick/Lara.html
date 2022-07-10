@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Default.css">
+    <link rel="stylesheet" href="../Backgrounds/Lara.css">
+    <script src="./Default.js"></script>
+    <title>라라 미리보기</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="icon_description" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_description">
+                <div>라라</div>
+            </label>
+            <div class="sidebar">
+                <h2>낭만 풍수사, 라라</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit" onclick="quitSidebar(this)">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <p>그란디스의 아니마 종족인 라라는 우연한 계기로 마을의 신비한 보물인 방울의 힘을 일깨워 토지령의 힘을 사용할 수 있게 되고 대대로 내려오는 전설에 따라 방울을 울리기 위한 모험을 떠나게 됩니다.</p><br>
+                <p>토지령과 교감하여 땅의 정기가 모인 용맥의 위치를 읽을 수 있습니다. 용맥에 모여든 토지령의 속성에 맞춰 다양한 방법으로 용맥의 힘을 이용할 수 있습니다.</p>
+                <button id="nuking" onclick="window.open('https://youtu.be/t6Hl_rd3yQk?t=939')">극딜 미리보기</button>
+            </div>
+            <input type="checkbox" id="icon_1st" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_1st">
+                <div>I</div>
+            </label>
+            <div class="sidebar">
+                <h2>1차 전직 - 라라</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_1차_정기 뿌리기.png">
+                                <p>정기 뿌리기 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 주력기.</b> 땅에 흐르는 정기를 끌어올려 적을 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_1차_폴짝.png">
+                                <p>폴짝 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 더블 점프.</b> 발돋움 판을 만들어 점프 중 한 번 더 도약한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_1차_위로 폴짝.png">
+                                <p>위로 폴짝 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 윗점프.</b> 발돋움 판을 만들어 위로 높이 뛴다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_1차_산 꼬마.png">
+                                <p>산 꼬마 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>정기 뿌리기 적중 시 일정 확률로 산의 토지령이 <b>공격을 돕는다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_1차_산 무등.png">
+                                <p>산 무등 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p>위험에 처하면 산의 토지령이 보호해준다.</p>
+                                <p>활성화시 <b>피격 데미지</b>가 감소한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_2nd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_2nd">
+                <div>II</div>
+            </label>
+            <div class="sidebar">
+                <h2>2차 전직 - 라라</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_용맥 읽기.png">
+                                <p>용맥 읽기 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p>지맥을 읽어 용맥의 위치를 발견할 수 있게 된다.</p>
+                                <p><b>용맥 스킬</b>을 사용 시 용맥이 소모된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_용맥 분출.png">
+                                <p>용맥 분출 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬</b></p>
+                                <p>용맥에 잠재되어 있는 힘을 분출시킨다.</p>
+                                <p>사용 시 용맥 속성에 맞는 <b>분출 스킬</b>이 발동된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_분출-너울이는 강.png">
+                                <p>분출 : 너울이는 강 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 분출 스킬</b></p>
+                                <p>강의 토지령이 너울을 일으켜 주변을 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_분출-돌개바람.png">
+                                <p>분출 : 돌개바람 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 분출 스킬</b></p>
+                                <p>바람의 토지령의 숨결로 돌개바람이 생성되어 주변의 적을 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_분출-해돋이 우물.png">
+                                <p>분출 : 해돋이 우물 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 분출 스킬</b></p>
+                                <p>해의 토지령이 솟아오른 후 흩어져 내리며 주변을 용암이 솟아오르는 지역으로 만든다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_2차_산의 씨앗.png">
+                                <p>산의 씨앗 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>산의 토지령이 자나라는 씨앗을 심는다.</p>
+                                <p>산의 토지령은 <b>주변의 적을 공격한다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_3rd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_3rd">
+                <div>III</div>
+            </label>
+            <div class="sidebar">
+                <h2>3차 전직 - 라라</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_3차_발현-강줄기 흐르는 곳.png">
+                                <p>발현 : 강줄기 흐르는 곳<br>- 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 발현 스킬</b></p>
+                                <p>강의 힘을 발현시켜 흐르는 강을 타고 이동할 수 있게 한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_3차_발현-바람 그네.png">
+                                <p>발현 : 바람 그네 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 발현 스킬</b></p>
+                                <p>바람의 힘을 발현시켜 상승 기류가 발생하는 영역을 생성한다.</p>
+                                <p>영역 안으로 들어오면 <b>공격 속도가 증가</b>하며,</p>
+                                <p>일정 시간동안 <b>부유가 가능하다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_3차_발현-햇살 가득 안은 터.png">
+                                <p>발현 : 햇살 가득 안은 터<br>- 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 발현 스킬</b></p>
+                                <p>해의 힘을 발현시켜 따스한 햇살이 내리쬐는 터를 생성한다.</p>
+                                <p>영역 안으로 들어오면 <b>데미지가 증가</b>하고 <b>HP가 회복된다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_3차_잠 깨우기.png">
+                                <p>잠 깨우기 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬</b></p>
+                                <p>잠들어 있는 용맥을 깨워 주변의 적을 공격한다,</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_3차_용맥의 자취.png">
+                                <p>용맥의 자취 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>용맥의 자취를 쫓아 근처에 있는 용맥의 위치로 <b>순간이동한다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_4th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_4th">
+                <div>IV</div>
+            </label>
+            <div class="sidebar">
+                <h2>4차 전직 - 라라</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_용맥 흡수.png">
+                                <p>용맥 흡수 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬</b></p>
+                                <p>용맥에 잠재되어 있는 힘을 흡수해 공격시 토지령들이 라라를 돕는다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_흡수-강 웅덩이 물벼락.png">
+                                <p>흡수 : 강 웅덩이 물벼락<br>- 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 흡수 스킬</b></p>
+                                <p>정기 뿌리기 적중 시 강의 토지령이 물벼락을 뿌려 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_흡수-소소리 바람.png">
+                                <p>흡수 : 소소리 바람 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 흡수 스킬</b></p>
+                                <p>정기 뿌리기 적중 시 바람의 토지령이 바람을 일으켜 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_흡수-햇빛 맹아리.png">
+                                <p>흡수 : 햇빛 맹아리 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬, 흡수 스킬</b></p>
+                                <p>정기 뿌리기 적중 시 해의 토지령이 모여 화염구를 뿜어내 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_용맥 변환.png">
+                                <p>용맥 변환 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>용맥의 <b>속성을 변환시킨다.</b> 방향키로 속성을 결정할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_풍월주인.png">
+                                <p>풍월주인 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>자연의 힘을 더욱 잘 다룰 수 있게 된다. 용맥에서 더 많은 잠재력을</p>
+                                <p>끌어낼 수 있어 <b>분출 스킬의 위력이 증가한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_지음.png">
+                                <p>지음 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>땅에 흐르는 정기를 더욱 많이, 넓게 끌어올릴 수 있게 되어</p>
+                                <p><b>정기 뿌리기가 강화된다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_4차_산 에움.png">
+                                <p>산 에움 - 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p>모든 생명을 포근히 안아주는 산의 힘으로 몸을 감싸 <b>피해를 줄인다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_hyper" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_hyper">
+                <div>Hyper</div>
+            </label>
+            <div class="sidebar">
+                <h2>하이퍼 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_하이퍼_자유로운 용맥.png">
+                                <p>자유로운 용맥 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>어떤 힘이든 머금을 수 있는 <b>자유로운 용맥</b>을 생성한다.</p>
+                                <p>생성된 자유로운 용맥에 분출, 흡수, 발현 스킬을 사용하면</p>
+                                <p><b>원하는 속성으로 용맥의 힘을 끌어낼 수 있다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_하이퍼_넝쿨 타래.png">
+                                <p>넝쿨 타래 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 바인드.</b> 넝쿨과 바위를 엮어 적을 옴짝달싹 못하게 만든다.</p>
+                                <p>공격당한 적은 <b>행동 불가 상태</b>가 된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_하이퍼_아름드리 나무.png">
+                                <p>아름드리 나무 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p>토지령들이 마음껏 뛰놀 수 있는 <b>아름드리 나무</b>를 자라나게 한다.</p>
+                                <p>아름드리 나무에 있으면 <b>능력치가 상승</b>하고 <b>몬스터가 약화된다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_5th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_5th">
+                <div>V</div>
+            </label>
+            <div class="sidebar">
+                <h2>5차 전직</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_5차_큰 기지개.png">
+                                <p>큰 기지개 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>용맥 스킬</b></p>
+                                <p>주변에 잠들어 있는 다수의 용맥의 힘을</p>
+                                <p>한 번에 일깨워 적을 추적 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_5차_해 강 산 바람.png">
+                                <p>인피니트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 극딜기.</b> 대자연 속에 존재하는 모든 종류의</p>
+                                <p>토지령을 불러내 함께 뛰논다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_5차_용솟음치는 정기.png">
+                                <p>용솟음치는 정기 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>라라의 광역기.</b> 강력한 정기에 이끌린 산의 토지령이 솟아오른다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Lara/라라_5차_산등성이 굽이굽이.png">
+                                <p>산등성이 굽이굽이 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>추적형 소환수 스킬.</b> 달리는 것을 좋아하는 특이한 산의 토지령들을</p>
+                                <p>불러낸다. 부딪힌 적들은 피해를 입는다.</p>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar"></div>
+        </nav>
+        <div class="character">
+            <img src="../maple/Lara.png">
+        </div>
+        <button id="previous_page" onclick="history.back()">돌아가기</button>
+    </div>
+</body>
+</html>

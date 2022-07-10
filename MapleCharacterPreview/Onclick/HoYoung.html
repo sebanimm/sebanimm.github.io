@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Default.css">
+    <link rel="stylesheet" href="../Backgrounds/HoYoung.css">
+    <script src="./Default.js"></script>
+    <title>호영 미리보기</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="icon_description" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_description">
+                <div>호영</div>
+            </label>
+            <div class="sidebar">
+                <h2>천방지축 도사, 호영</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit" onclick="quitSidebar(this)">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <p>호영은 <b>부적 도력</b>과 <b>두루마리 도력</b>이라는 이중 게이지 시스템을 사용하는 게이지 직업입니다.</p><br>
+                <p>하지만 <b>선기 : 영약 태을선단</b> 덕분에, 다른 게이지 직업에 비해 쉬운 게이지 운용 난이도를 보여줍니다.</p><br>
+                <p>또한 호영은 <b>강력한 극딜</b>, <b>좋은 사냥 능력</b>, <b>뛰어난 기동성과 최상급의 생존 유틸</b>, 
+                <b>쉬운 딜사이클</b>을 가진 팔방미인 직업입니다.</p><br>
+                <p>하지만 보스전에서 <b>유지해야 하는 스킬이 무려 4가지나 된다는 점</b>과 <b>높은 조작 난이도</b>, 
+                <b>높은 코어 강화 난이도</b>, <b>주력기의 선/후딜 문제</b> 등등의 단점이 존재합니다.</p>
+                <button id="nuking" onclick="window.open('https://youtu.be/t6Hl_rd3yQk?t=910')">극딜 미리보기</button>
+            </div>
+            <input type="checkbox" id="icon_1st" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_1st">
+                <div>I</div>
+            </label>
+            <div class="sidebar">
+                <h2>1차 전직 - 호영</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_1차_부적_도력.png">
+                                <p>부적 도력 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 첫 번째 게이지. 천/지/인 속성 도술</b> 적중 시 <b>부적 도력</b>이</p>
+                                <p>충전되고, 부적 도력을 사용하여 <b>부적 도술</b>을 사용할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_1차_여의선-인.png">
+                                <p>여의선 : 인 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[인 속성 도술] 호영의 사냥 주력기.</b></p>
+                                <p>거대하게 변화시킨 부채를 휘두른다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_1차_마봉_호로부.png">
+                                <p>마봉 호로부 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[부적 도술]</b> 호리병으로 적을 흡수했다가 발사한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_1차_초상비.png">
+                                <p>초상비 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 트리플 점프.</b> 가벼운 몸놀림으로 도약한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_1차_근두운.png">
+                                <p>근두은 - 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 공중 부양형 이동/유틸기.</b> 일정 시간 비행을 할 수 있다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_2nd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_2nd">
+                <div>II</div>
+            </label>
+            <div class="sidebar">
+                <h2>2차 전직 - 호영</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_2차_토파류-지.png">
+                                <p>토파류 : 지 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[지 속성 도술] 호영의 보스 주력기.</b></p>
+                                <p>땅을 차서 지면을 타고 달리는 기운을 날린다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_2차_토파류-허실.png">
+                                <p>토파류 : 허/실 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>토파류 : 지의 연계 스킬.</b> 시전시 피해를 입힌다.</p>
+                                <p><b>토파류 : 실</b> : 토파류 : 지 시전 중 방향키와 함께 재사용시 돌진한다.</p>
+                                <p><b>토파류 : 허</b> : 토파류 : 실로 연계하지 않을 시 자동적으로 사용된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_2차_환영_분신부.png">
+                                <p>환영 분신부 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>[부적 도술]</b> 일정 시간 동안 적을 공격 시 일정 확률로</p>
+                                <p>분신이 나와 적을 공격한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_3rd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_3rd">
+                <div>III</div>
+            </label>
+            <div class="sidebar">
+                <h2>3차 전직 - 호영</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_두루마리_도력.png">
+                                <p>두루마리 도력 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 두번 째 게이지. 천/지/인 도술 사용</b> 및 <b>부적 도술 사용 시</b></p>
+                                <p><b>두루마리 도력</b>이 충전되고, 두루마리 도력을 사용하여</p>
+                                <p><b>두루마리 도술</b>을 사용할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_파초풍-천.png">
+                                <p>파초붕 : 천 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[천 속성 도술] 호영의 유틸기.</b> 공중으로</p>
+                                <p>도약한 뒤 바람을 일으켜 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_파초풍-허실.png">
+                                <p>파초풍 : 허/실 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>파초풍 : 천의 연계 스킬.</b> 시전시 적을 밟아 피해를 입힌다.</p>
+                                <p><b>파초풍 : 실</b> : 파초풍 : 천 시전 중 방향키와 함께 재사용시 다시 한번 공중으로 도약한다.</p>
+                                <p><b>파초풍 : 허</b> : 파초풍 : 실로 연계하지 않을 시 자동적으로 사용된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_지진쇄-지.png">
+                                <p>지진쇄 : 지 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[지 속성 도술]</b> 지면을 강하게 내리찍어 주변에 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_지진쇄-허실.png">
+                                <p>지진쇄 : 허/실 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>지진쇄 : 지의 연계 스킬.</b> 시전시 피해를 입힌다.</p>
+                                <p><b>지진쇄 : 실</b> : 토파류 : 지 시전 중 방향키와 조합하여 순간이동한다.</p>
+                                <p><b>지진쇄 : 허</b> : 지진쇄 : 실로 연계하지 않을 시 자동적으로 사용된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_추적_귀화부.png">
+                                <p>추적 귀화부 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>[부적 도술]</b> 도깨기불을 소환하여 적을 추적하여 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_3차_권술-미생강변.png">
+                                <p>권술 : 미생강변 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[두루마리 도술]</b> 일반 몬스터에게 시전 시 미물로 변이 및 방어율을</p>
+                                <p>감소시키고, 보스 몬스터에게는 방어율만 감소시킨다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_4th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_4th">
+                <div>IV</div>
+            </label>
+            <div class="sidebar">
+                <h2>4차 전직 - 호영</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_멸화염-천.png">
+                                <p>멸화염 : 천 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[천 속성 도술]</b> 큰 화염을 일으켜 주변에 피해를 입히며,</p>
+                                <p><b>초상비 및 근두운 사용이 초기화된다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_멸화염-허실.png">
+                                <p>멸화염 : 허/실 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>멸화염 : 천의 연계 스킬.</b> 시전시 화염을 일으키며 공중으로<br>솟아오르고, 주변에 피해를 입힌다.</p>
+                                <p><b>멸화염 : 허</b> : 멸화염 : 천 시전 중 방향키와 함께 재사용시 다시 한번 공중으로 도약한다.</p>
+                                <p><b>멸화염 : 실</b> : 멸화염 : 허로 연계하지 않을 시 자동적으로 사용된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_금고봉-인.png">
+                                <p>금고봉 : 인 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[인 속성 도술]</b> 신묘한 무기를 소환해 적을 빠르게 난타한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_둔갑_천근석.png">
+                                <p>둔갑 천근석 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>인면석으로 둔갑해 <b>급강하 한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_왜곡_축지부.png">
+                                <p>왜곡 축지부 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[부적 도술] 호영의 설치형 텔레포트기.</b> 축지문을 만들며, 재사용 시</p>
+                                <p>흔적을 남기고 축지문으로 <b>순간 이동한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_권술-흡성와류.png">
+                                <p>권술 : 흡성와류 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[두루마리 도술] 호영의 설치기.</b> 두루마리를 펼쳐</p>
+                                <p>강렬한 소용돌이를 불러낸다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_4차_권술-호접지몽.png">
+                                <p>권술 : 호접지몽 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>[두루마리 도술] 호영의 사출기.</b> 두루마리를 펼쳐 나비를 불러낸다.</p>
+                                <p>공격 시 <b>적을 추격하는 나비가 소환된다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_hyper" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_hyper">
+                <div>Hyper</div>
+            </label>
+            <div class="sidebar">
+                <h2>하이퍼 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_하이퍼_선기-영약_태을선단.png">
+                                <p>선기 : 영약 태을선단 <br>- 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p>일정 시간동안 선단의 효과로 <b>부적 도력</b>과</p>
+                                <p><b>두루마리 도력</b>이 빠르게 회복된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_하이퍼_선기-몽유도원.png">
+                                <p>선기 : 몽유도원 <br>- 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 키다운 무적기.</b> 키다운 유지 중 무적이며</p>
+                                <p>남은 시간에 비례해 <b>쿨타임이 줄어든다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_하이퍼_선기-분신_둔갑_태을선인.png">
+                                <p>선기 : 분신 둔갑 태을선인<br>- 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 바인드.</b> 귀에 못이 박히게 들었던 사부님의 잔소리를 재현한다.</p>
+                                <p>공격 당한 적이 적을수록 <b>행동 불가 지속시간이 늘어난다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_5th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_5th">
+                <div>V</div>
+            </label>
+            <div class="sidebar">
+                <h2>5차 전직</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_5차_선기-극대_분신난무.png">
+                                <p>선기 : 극대 분신난무<br>- 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 극딜 버프.</b> 잠시동안 환영 분신부를 크게 강화한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_5차_권술-산령소환.png">
+                                <p>권술 : 산령소환 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[두루마리 도술] 호영의 설치형 소환수 스킬.</b> 주변에 피해를 입히며</p>
+                                <p>속성 연계 3단계에 성공할 때 마다 더 큰 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_5차_선기-강림_괴력난신.png">
+                                <p>선기 : 강림 괴력난신<br>- 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 무적기 겸 극딜기이자 극딜 버프.</b> 일정 시간동안 <b>데미지가</b></p>
+                                <p><b>증가</b>하며 <b>공격 시 추가 일격이 발동</b>된다. 스킬 재사용 시 즉시 종료되며</p>
+                                <p><b>신들의 강림</b>이 발동된다.</p>
+                                <p>신들의 강림은 시전 중 무적이며, 적에게 큰 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/HoYoung/호영_5차_선기-천지인_환영.png">
+                                <p>선기: 천지인 환영<br>- 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>호영의 극딜 버프.</b> 지속 중 분신이 등장해 공격하며,</p>
+                                <p>속성 연계 3단계 달성 시 천/지/인 도술 중 한 속성 도술의</p>
+                                <p><b>재사용 대시기간이 초기화된다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar"></div>
+        </nav>
+        <div class="character">
+            <img src="../maple/HoYoung.png">
+        </div>
+        <button id="previous_page" onclick="history.back()">돌아가기</button>
+    </div>
+</body>
+</html>

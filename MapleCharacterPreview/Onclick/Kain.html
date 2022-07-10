@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Default.css">
+    <link rel="stylesheet" href="../Backgrounds/Kain.css">
+    <script src="./Default.js"></script>
+    <title>카인 미리보기</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="icon_description" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_description">
+                <div>카인</div>
+            </label>
+            <div class="sidebar">
+                <h2>어둠의 추격자, 카인</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit" onclick="quitSidebar(this)"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <p>폭력으로 그란디스의 도시 툴렌시티를 지배하고 있는 조직 소속인 카인은 보스가 자신을 계속 속여왔던 것을 깨닫고 잃어버린 과거를 돌려받기 위한 싸움을 시작합니다.</p><br>
+                <p>전용무기 브레스 슈터와 상처 입은 적을 처리하기 위한 근접 무기를 다룹니다. 고대신의 힘을 발현하여 적에게 죽음의 축복을 내리고 치명적인 일격을 날릴 수 있습니다.</p>
+                <button id="nuking" onclick="window.open('https://youtu.be/t6Hl_rd3yQk?t=626')">극딜 미리보기</button>
+            </div>
+            <input type="checkbox" id="icon_1st" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_1st">
+                <div>I</div>
+            </label>
+            <div class="sidebar">
+                <h2>1차 전직 - 카인</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_1차_스트라이크 애로우.png">
+                                <p>스트라이크 애로우 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 주력기.</b> 한 번에 수개의 화살을 동시에 발사한다. 적중시</p>
+                                <p>적 주변에 <b>화살 파편</b>이 튀어 추가 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_1차_쉐도우 스텝.png">
+                                <p>쉐도우 스텝 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 돌진기.</b> 어둠에 몸을 숨겨 빠르게 이동한다.</p>
+                                <p>이동 중 재사용 시 급정지할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_1차_그래플링 와이어.png">
+                                <p>그래플링 와이어 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>와이어를 발사하여 발판에 걸고, 스킬을 재사용하여</p>
+                                <p>와이어를 타고 이동할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_1차_쉐도우 스위프트.png">
+                                <p>쉐도우 스위프트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 더블 점프.</b> 점프 중 한번 더 도약하여 먼 거리를 이동한다.</p>
+                                <p>위 방향으로도 이동할 수 있다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_2nd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_2nd">
+                <div>II</div>
+            </label>
+            <div class="sidebar">
+                <h2>2차 전직 - 카인</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_포제션.png">
+                                <p>포제션 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 게이지.</b> 공격 시 또는 일정 시간마다 자신의 악의를 통해</p>
+                                <p><b>멜리스</b>를 생성할 수 있으며, 일정량 이상 모이면 <b>멜리스 스톤</b>을 하나씩 얻는다. 사용시 멜리스 스톤을 소모해 <b>포제션</b> 상태로 돌입 할 수 있고, 포제션 상태에서는 일부 스킬이 <b>발현 스킬</b>로 강화된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_드래곤 팡.png">
+                                <p>드래곤 팡 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> 카인이 직접 공격하는 스킬 적중 시</p>
+                                <p><b>검은 구체</b>가 생성되며,주변의 적을 <b>자동으로 공격</b>한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_스트라이크 애로우 II.png">
+                                <p>스트라이크 애로우 II - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>스트라이크 애로우 의 후속 연계기.</b> 스트라이크 애로우 사용 후 일정</p>
+                                <p>시간 안에 해당 스킬을 재사용하여 사용할 수 있으며,</p>
+                                <p>스트라이크 애로우와 동일하게 <b>화살 파편</b>이 발동된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_[발현] 스트라이크 애로우.png">
+                                <p>[발현] 스트라이크 애로우</p>
+                                <p>- 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[발현 스킬]</b> 악의가 화살을 변형시켜 <b>사정거리</b>와 <b>위력</b>이 증가된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_스캐터링 샷.png">
+                                <p>스캐터링 샷 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>여러 방향으로 화살을 흩뿌려 넓은 범위를 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_2차_[발현] 스캐터링 샷.png">
+                                <p>[발현] 스캐터링 샷 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[발현 스킬]</b> 악의가 담긴 화살이 목표를 추적하게 된다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_3rd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_3rd">
+                <div>III</div>
+            </label>
+            <div class="sidebar">
+                <h2>3차 전직 - 카인</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_스트라이크 애로우 III.png">
+                                <p>스트라이크 애로우 III - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>스트라이크 애로우 II 의 후속 연계기.</b> 스트라이크 애로우 II 사용 후 일정 시간 안에 해당 스킬을 재사용하여 사용할 수 있으며</p>
+                                <p>스트라이크 애로우와 동일하게 화살 파편이 발동된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_데스 블레싱.png">
+                                <p>데스 블레싱 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>악의에 노출된 적에게 죽음의 축복을 내린다. <b>발현 스킬</b>에</p>
+                                <p>적중당한 적은 <b>죽음의 축복 표식</b>이 새겨지고,</p>
+                                <p>이 표식을 <b>처형 스킬</b>로 터뜨려 피해를 주고 <b>특별한 버프</b>를 얻는다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_샤프트 브레이크.png">
+                                <p>샤프트 브레이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>적을 관통한 후 통과하여 폭발하는 화살을 발사한다.</p>
+                                <p>화살은 붕괴하기 전 적을 끌어당긴다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_[발현] 샤프트 브레이크.png">
+                                <p>[발현] 샤프트 브레이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[발현 스킬]</b> 화살이 폭발한 후 악의가 회오리처럼 남아 적을 괴롭힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_[처형] 팬텀 블레이드.png">
+                                <p>[처형] 팬텀 블레이드 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[처형 스킬]</b> 브레스 슈터에 숨겨져 있던 검을 돌출시켜</p>
+                                <p>전방의 적을 빠르게 벤다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_[처형] 테어링 나이프.png">
+                                <p>[처형] 테어링 나이프 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[처형 스킬]</b> 단검으로 적을 찌르고 빼내 치명적인 피해를 입힌다. </p>
+                                <p>적을 처치하면 <b>쉐도우 스텝의 재사용 대기시간이 초기화</b>된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_3차_리메인 인센스.png">
+                                <p>리메인 인센스 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> <b>발현 스킬</b>로 적을 공격할 시 결정이 생성되고,</p>
+                                <p>카인이 직접 공격시 활성화되어 적을 공격하고 사라진다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_4th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_4th">
+                <div>IV</div>
+            </label>
+            <div class="sidebar">
+                <h2>4차 전직 - 카인</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_포제션 II.png">
+                                <p>포제션 II - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>포제션의 강화 패시브. 멜리스의 획득량</b>과 <b>멜리스 스톤의</p>
+                                <p>최대 소지량</b>이 증가한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_폴링 더스트.png">
+                                <p>폴링 더스트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>높이 도약하여 아래를 향해 충격 화살을 발사한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_[발현] 폴링 더스트.png">
+                                <p>[발현] 폴링 더스트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[발현 스킬]</b> 충격파가 발생한 이후 거대한 악의가 한 번 더 적을 덮친다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_[처형] 체인 시클.png">
+                                <p>[처형] 체인 시클 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[처형 스킬]</b> 낫을 던져 전방으로 크게 휘두른 뒤 위에서 내리찍는다.</p>
+                                <p>적을 처치하면 <b>쉐도우 스텝의 재사용 대기시간이 초기화</b>된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_[처형] 포이즌 니들.png">
+                                <p>[처형] 포이즌 니들 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[처형 스킬]</b> 전방으로 크게 회전하여 적을 베어낸 후,</p>
+                                <p>사방으로 독침을 사출한다. 잠시 체공할 수 있으며,</p>
+                                <p>적을 처치하면 <b>쉐도우 스텝의 재사용 대기시간이 초기화</b>된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_4차_드래곤 스케일.png">
+                                <p>드래곤 스케일 - 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 무적기.</b> 공격을 무효화시키는 보호막을</p>
+                                <p>생성하여 <b>무적 상태</b>가 된다.</p>
+                                <p>키다운을 유지해 일정 시간 상태를 유지하며 이동할 수 있다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_hyper" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_hyper">
+                <div>Hyper</div>
+            </label>
+            <div class="sidebar">
+                <h2>하이퍼 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_하이퍼_체이싱 샷.png">
+                                <p>체이싱 샷 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 사출기.</b> 적을 추적하여 공격하는 화살을 발사한다</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_하이퍼_스니키 스나이핑.png">
+                                <p>스니키 스나이핑</p>
+                                <p>- 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p>정신을 집중하여 은밀히 적을 조준한 후 저격한다.</p>
+                                <p>키다운하여 조준을 지속할수록 공격 범위가 늘어난다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_하이퍼_[발현_처형] 스니키 스나이핑.png">
+                                <p>[발현/처형] 스니키 스나이핑</p>
+                                <p>- 액티브(키다운)</p>
+                            </td>
+                            <td>
+                                <p><b>[발현/처형 스킬]</b> 악의를 응축시킨 화살로 적을 저격한다.</p>
+                                <p>키다운하여 조준을 지속할수록 공격 범위가 늘어난다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_하이퍼_인카네이션.png">
+                                <p>인카네이션 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>극딜 보조용 버프.</b> 데미지와 공격력이 증가하며 악의의 화신이 되어</p>
+                                <p>다른 자에게 <b>죽음의 축복</b>을 사용할 수 있는 능력을 하사한다</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_5th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_5th">
+                <div>V</div>
+            </label>
+            <div class="sidebar">
+                <h2>5차 전직</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit">
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_5차_[발현] 드래곤 버스트.png">
+                                <p>[발현] 드래곤 버스트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[발현 스킬] 카인의 극딜기. </b>브레스 슈터를 통해 내재된 힘을 끌어내 전방으로 뿜어낸다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_5차_[처형] 페이탈 블리츠.png">
+                                <p>[처형] 페이탈 블리츠 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[처형 스킬] 카인의 극딜기.</b> 신속하게 움직이며 전방의 적에게 치명적인 일격을 연속하여 날린다.</p>
+                                <p>적을 처치하면 <b>쉐도우 스텝의 재사용 대기시간이 초기화</b>된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_5차_타나토스 디센트.png">
+                                <p>타나토스 디센트 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 극딜 버프이자 극딜기.</b> 일정 시간동안 <b>데미지</b>와</p>
+                                <p><b>멜리스 획득량</b>이 증가한다. 또한 지속시간 중 <b>추가 공격</b>이 발동된다. 스킬 재사용시 즉시 종료되며, <b>죽음의 영역</b>을 발동한다.</p>
+                                <p>죽음의 영역은 시전 중 무적이며 주변에 큰 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Kain/카인_5차_그립 오브 애거니.png">
+                                <p>그립 오브 에거니 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>카인의 설치형 극딜기.</b> 적을 일정량 처치하거나 일정 횟수만큼</p>
+                                <p>공격하면 <b>단말마</b>를 수확한다.</p>
+                                <p>시전 시 단말마를 모두 소모하여 고통의 손을</p>
+                                <p>소환해 적에게 피해를 입힌다.</p>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar"></div>
+        </nav>
+        <div class="character">
+            <img src="../maple/Kain.png">
+        </div>
+        <button id="previous_page" onclick="history.back()">돌아가기</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+@font-face {
+    font-family: "tmon";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'maplebold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body::before {
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-filter: blur(10px); 
+    -moz-filter: blur(10px); 
+    -o-filter: blur(10px); 
+    -ms-filter: blur(10px); 
+    filter: blur(10px);
+    transform: scale(1.08);
+    background-repeat: no-repeat;
+    z-index: -10; 
+    content: "";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+}
+
+.character {
+    float: right;
+}
+
+.sidebar {
+    background: black;
+    position: fixed;
+    width:950px;
+    top: 0;
+    height: 100vh;
+    left: -873px;
+    z-index: -100;
+    transition: all .5s;
+    border-left: 3px solid white;
+    overflow: scroll;
+}
+
+.skill {
+    height: 32px;
+    width: 32px;
+    display: block;
+    margin:10px auto;
+}
+
+.skill_icon {
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    font-family: "nanum";
+}
+
+.skill_description {
+    width: 440px;
+    height: 50px;
+    background-color: white;
+    font-family: "nanum";
+}
+
+img {
+    width: 500px;
+}
+
+h2 {
+    margin: 40px 0 0 0;
+    text-align: center;
+    font-family: "tmon";
+    color: white;
+    font-size: 50px;
+}
+
+p {
+    font-family: "nanum";
+    margin: 0 30px;
+    font-size: 30px;
+    color: white;
+}
+
+nav {
+    float:left;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    width:80px;
+}
+
+label {
+    color: white;
+    cursor: pointer;
+    z-index: 15;
+}
+
+label > div {
+    font-family: "maplebold";
+    font-size: 18px;
+    text-align: center;    
+}
+
+table {
+    margin: 0 auto 40px auto;
+    width: 660px;
+}
+
+td {
+    background-color: white;
+    width: 100px;
+    height: 120px;
+}
+
+td > p {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.skill + p {
+    margin: 0;
+}
+
+.icon {
+    display: none;
+}
+.icon:checked + label {
+    z-index: 16;
+    width: 80px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+.icon:checked + label + div {
+    left: 80px;
+    background-color: black;
+}
+.icon + label + div {
+    background: black;
+}
+
+#sidebar_quit {
+    display: none;
+}
+
+#sidebar_quit + label {
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    top: -7.6%;
+    left: 88%;
+    transition: .2s;
+}
+
+#sidebar_quit + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+#sidebar_quit + label span:nth-child(1) {
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+
+#sidebar_quit + label span:nth-child(2) {
+    bottom: 50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+
+#sidebar_quit + label:active {
+    transform: scale(1.3);
+}
+
+#previous_page {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    font-size: 24px;
+    border-radius: 28px;
+    margin: auto;
+    font-family: "nanum";
+    cursor: pointer;
+    border: 0;
+    position: fixed;
+    border: 4px solid #6aafe6;
+    color: #534f4f;
+    left: 88%;
+    top: 88%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0,10);
+    transition: 0.22s;
+}
+
+#previous_page:hover {
+    background-color: #6aafe6;
+    color: #43352b;
+    transform: scale(1.2);
+    transition: 0.22s;
+}
+
+#previous_page:active {
+    transform: scale(1.4);
+    transition: .2s;
+}
+
+#nuking {
+    border: 0;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 40px;
+    font-family: "GongGothicMedium";
+    font-size: 30px;
+    width: 220px;
+    height: 70px;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+    color: white;
+    transition: .2s;
+}
+
+#nuking:hover {
+    transform: scale(1.2);
+}
+
+#nuking:active {
+    transform: scale(1.4);
+}

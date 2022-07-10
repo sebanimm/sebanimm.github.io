@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Default.css">
+    <link rel="stylesheet" href="../Backgrounds/Zero.css">
+    <script src="./Default.js"></script>
+    <title>제로 미리보기</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="icon_description" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_description">
+                <div>제로</div>
+            </label>
+            <div class="sidebar">
+                <h2>시간의 초월자, 제로</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit" onclick="quitSidebar(this)"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <p>검은 마법사에 의해 봉인되기 전 시간의 여신이 탄생시킨 신의 아이입니다. 시간의 초월자가 될 운명을 갖고 있습니다.</p><br>
+                <p>서로 다른 무기와 공격 스타일을 가진 두 명의 제로를 함께 성장시키며, 전투 도중 캐릭터를 교체하여 공격하는 태그 시스템을 가지고 있습니다.</p><br>
+                <p>시간의 힘인 타임 포스를 사용하여 스킬을 사용하며, 스킬을 연계할수록 보다 화려하고 강력한 스킬을 사용할 수 있습니다.</p>
+                <button id="nuking" onclick="window.open('https://youtu.be/t6Hl_rd3yQk?t=840')">극딜 미리보기</button>
+            </div>
+            <input type="checkbox" id="icon_default" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_default">
+                <div>공용</div>
+            </label>
+            <div class="sidebar">
+                <h2>공용 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_공용_듀얼 컴뱃.png">
+                                <p>듀얼 컴뱃 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>제로만의 특별한 전투 스타일.</b> 예를 들어 알파가 나온 상태에서<br>
+                                    베타의 스킬을 쓸 경우, <b>캐릭터가 베타로 교체되며</b><br>
+                                    잠시동안 <b>알파가 베타를 도와 공격한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_공용_디바인 포스.png">
+                                <p>디바인 포스 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 파티 버프.</b> 초월자의 힘으로 주변에 있는 파티원의<br>
+                                    공격력, 마력, 방어력, 내성을 증가시켜준다.<br>
+                                    <b>디바인 스위프트와 함께 사용할 수 없다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_공용_디바인 스위프트.png">
+                                <p>디바인 스위프트 <br>- 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 파티 버프.</b> 초월자의 힘으로 주변에 있는 파티원의<br>
+                                    공격 속도, 이동속도, 점프력을 증가시켜준다.<br>
+                                    <b>디바인 포스와 함께 사용할 수 없다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_공용_버스트 점프.png">
+                                <p>버스트 점프 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>제로의 더블 점프.</b> 점프 중 자신의 시간을 가속시켜 더 멀리 점프한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_공용_버스트 스텝.png">
+                                <p>버스트 스텝 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>제로의 텔레포트기.</b> 순간적으로 자신의 시간을 가속시켜 빠르게 이동한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_1st" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_1st">
+                <div>알파</div>
+            </label>
+            <div class="sidebar">
+                <h2>알파 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_문 스트라이크.png">
+                                <p>문 스트라이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>알파의 첫번째 콤비네이션 스킬.</b> 전방에 있는 적을 공격하여</p>
+                                <p><b>자신의 앞쪽으로 끌어온다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_피어스 쓰러스트.png">
+                                <p>피어스 쓰러스트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>문 스트라이크의 후속 연계기.</b> 전방으로 적을 향해</p>
+                                <p>태도를 찔러 <b>밀어버린다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_쉐도우 스트라이크.png">
+                                <p>쉐도우 스트라이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>피어스 쓰러스트의 후속 연계기.</b> 전방의 적을 베고,</p>
+                                <p>검기를 발생시킨다. 방향키와 함께 사용 시</p>
+                                <p><b>적에게 순간이동</b>하여 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_플래시 어썰터.png">
+                                <p>플래시 어썰터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>알파의 두번째 콤비네이션 스킬. 전방으로 순간이동</b>하여</p>
+                                <p>경로 내 적들에게 데미지를 준다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_스핀 커터.png">
+                                <p>스핀 커터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>플래시 어썰터의 후속 연계기.</b> 빠르게 회전하며</p>
+                                <p>주변에 있는 적을 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_어드밴스드 스핀 커터.png">
+                                <p>어드밴스드 스핀 커터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>스핀 커터의 강화 버전.</b> 양옆으로 관통하는</p>
+                                <p>검기를 발생시켜 추가로 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_롤링 커브.png">
+                                <p>롤링 커브 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>알파의 세번째 콤비네이션 스킬.</b> 전방으로 튀어 오르며</p>
+                                <p>경로 내 적들을 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_어드밴스드 롤링 커브.png">
+                                <p>어드밴스드 롤링 커브 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>롤링 커브의 강화 버전.</b> 사방을 관통하는 검기를 발생시켜</p> 
+                                <p>적을 추가로 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_롤링 어썰터.png">
+                                <p>롤링 어썰터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>롤링 커브의 후속 연계기.</b> 전방으로 빠르게 회전하며</p>
+                                <p>이동하여 경로 내 적들을 밀면서 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_어드밴스드 롤링 어썰터.png">
+                                <p>어드밴스드 롤링 어썰터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>롤링 커브의 강화 버전.</b> 위와 앞뒤로 관통하는</p> 
+                                <p>검기를 발생시켜 추가로 공격한다. </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_윈드 커터.png">
+                                <p>윈드 커터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>알파의 4번째 콤비네이션 스킬.</b> 전방의 적들을 공격하며,</p> 
+                                <p>대상의 위치에 <b>소용돌이를 생성</b>시켜 추가로 공격한다</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_롤링 어썰터.png">
+                                <p>윈드 스트라이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>윈드 커터의 후속 연계기.</b> 전방의 적들을 공격하며</p>
+                                <p>범위 내에 있는 <b>소용돌이를 전방으로 보낸다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_스톰 브레이크.png">
+                                <p>스톰 브레이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>윈드 스트라이크의 후속 연계기.</b> 전방의 적들을 공격하며 소용돌이를</p> 
+                                <p>생성시켜 전방으로 보내 적에게 추가로 공격한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/제로_알파_어드밴스드 롤링 어썰터.png">
+                                <p>어드밴스드 스톰 브레이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>스톰 브레이크의 강화 버전.</b> 소용돌이가 날아간 자리에</p> 
+                                <p><b>전기 지역</b>을 남기는 기능이 추가된다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_2nd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_2nd">
+                <div>베타</div>
+            </label>
+            <div class="sidebar">
+                <h2>베타 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_에테르.png">
+                                <p>에테르 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>트리거 스킬 적중 시</b> 또는 일정 시간마다 <b>에테르</b> 를 획득하며, 에테르 게이지에 따라 에테르 소드가 창조된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_에테르_결정.png">
+                                <p>에테르 결정 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>공격 시 일정 확률로 에테르 결정이 생성된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_펀토.png">
+                                <p>펀토 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬] 아델의 2차 주력기.</b> 다수의 장검을 생성하여 전방을 찌른다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_크리에이션.png">
+                                <p>크리에이션 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> 활성화 시 창조된 에테르 소드의 수에 따라 트리거 스킬 적중 시 추가 공격을 한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_임페일.png">
+                                <p>임페일 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>에테르 소드를 생성해 날리고, 사정거리 끝에 에테르 결정을 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_레조넌스.png">
+                                <p>레조넌스 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p>에테르 결정과 공명하여 돌진한다. 적중 시 특별한 버프를 획득하며, 임페일과 연계할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_원더.png">
+                                <p>원더 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> 공격 시 샤드가 자동 생성된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_부스터.png">
+                                <p>부스터 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>일정 시간동안 공격 속도가 증가한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_마스터리.png">
+                                <p>마스터리 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>튜너의 숙련도와 공격력이 증가한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_어트리뷰트.png">
+                                <p>어트리뷰트 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>일정 시간마다 최대 HP/MP가 회복된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_2차_트레인.png">
+                                <p>트레인 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>주스텟이 증가한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_hyper" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_hyper">
+                <div>초월자</div>
+            </label>
+            <div class="sidebar">
+                <h2>초월자 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_크로스.png">
+                                <p>크로스 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬] 아델의 3차 주력기. </b> 2자루의 장검을 생성하여 벤다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_오더.png">
+                                <p>오더 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 사출기.</b> 창조한 에테르 소드에 명령을 내려 적을 추적하게 한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_게더링.png">
+                                <p>게더링 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>오더로 명령을 내린 모든 에테르 소드를 되돌아오게 한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_테리토리.png">
+                                <p>테리토리 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 설치기.</b> 수많은 검이 창조되는 영역을 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_노빌리티.png">
+                                <p>노빌리티 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>영역 안에 있는 파티원이 입은 피해의 일부를 대신 받고 그에 비례해 실드를 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_페더.png">
+                                <p>페더 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 후방 텔레포트기.</b> 사용시 후방으로 이동하며, 트레드를 제외한 트리거 스킬 사용 중에도 이동할 수 있다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_어센트.png">
+                                <p>어센트 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>일부 스킬의 데미지와 공격 관련 능력치가 증가한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_3차_톨러런스.png">
+                                <p>톨러런스 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>방어 관련 능력치가 증가한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_5th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_5th">
+                <div>V</div>
+            </label>
+            <div class="sidebar">
+                <h2>5차 전직</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_5차_루인.png">
+                                <p>루인 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 광역기.</b> 고대 멸망의 검을 소환하여 주변을 붕괴시킨다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_5차_인피니트.png">
+                                <p>인피니트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 무적기 겸 극딜기.</b> 무수한 에테르 소드가 창조되는 공간을 만든다. 스킬 시전 시와 스킬이 끝날 때 잠시 무적이 된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_5차_리스토어.png">
+                                <p>리스토어 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 극딜 버프.</b> 일정 시간동안 데미지와 에테르 획득량, 오더로 명령할 수 있는 에테르 소드의 개수가 증가한다. 또한 일정 시간마다 주변에 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Zero/아델_5차_스톰.png">
+                                <p>스톰 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>오더 연계형 다수 공격기.</b>오더로 명령을 내린 모든 에테르 소드를 몸 주위에서 폭풍과 같이 움직이게 한다.</p>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar"></div>
+        </nav>
+        <div id="spacing">
+            <div class="character">
+                <img src="../maple/Zero_Alpha.png">
+            </div>
+            <div class="character">
+                <img src="../maple/Zero_Beta.png">
+            </div>            
+        </div>
+        <button id="previous_page" onclick="history.back()">돌아가기</button>
+    </div>
+</body>
+</html>

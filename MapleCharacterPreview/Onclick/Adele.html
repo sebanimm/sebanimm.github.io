@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Default.css">
+    <link rel="stylesheet" href="../Backgrounds/Adele.css">
+    <script src="./Default.js"></script>
+    <title>아델 미리보기</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="icon_description" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_description">
+                <div>아델</div>
+            </label>
+            <div class="sidebar">
+                <h2>검의 지휘자, 아델</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit" onclick="quitSidebar(this)"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <p>그란디스의 하이레프 종족인 아델은 명예로운 기사였으나, 모종의 이유로 아공간에 유폐돼 있었습니다.</p><br>
+                <p>오랜 시간이 흐른 후, 차원을 넘어 들리는 한 소년의 간절한 기도에 의해 현실로 소환됩니다.</p><br>
+                <p>마력으로 이루어진 에테르 소드를 창조하여 무기로 사용하며 검에 의지를 담아 손에 쥐지 않고 자유롭게 다룰 수 있습니다.</p>
+                <button id="nuking" onclick="window.open('https://youtu.be/t6Hl_rd3yQk?t=783')">극딜 미리보기</button>
+            </div>
+            <input type="checkbox" id="icon_1st" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_1st">
+                <div>I</div>
+            </label>
+            <div class="sidebar">
+                <h2>1차 전직 - 아델</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_1차_플레인.png">
+                                <p>플레인 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 1차 주력기.</b> 마력으로 이루어진 검을 생성하여 전방을 벤다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_1차_샤드.png">
+                                <p>샤드 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 사출기.</b> 적을 추적하는 <b>마력 조각</b>을 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_1차_볼트.png">
+                                <p>볼트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 더블 점프.</b> 점프 중 한번 더 도약하여 먼 거리를 이동한다</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_1차_레비테이션.png">
+                                <p>레비테이션 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 체공기.</b> 마력을 방출하여 짧은 시간동안 체공한다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_2nd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_2nd">
+                <div>II</div>
+            </label>
+            <div class="sidebar">
+                <h2>2차 전직 - 아델</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_에테르.png">
+                                <p>에테르 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 게이지.</b> <b>트리거 스킬 적중 시</b> 또는 일정 시간마다</p>
+                                <p><b>에테르</b>를 획득하며, 에테르 게이지에 따라 <b>에테르 소드</b>가 창조된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_에테르_결정.png">
+                                <p>에테르 결정 - 패시브</p>
+                            </td>
+                            <td>
+                                <p>공격 시 일정 확률로 <b>에테르 결정</b>이 생성된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_펀토.png">
+                                <p>펀토 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬] 아델의 2차 주력기.</b></p>
+                                <p>다수의 장검을 생성하여 전방을 찌른다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_크리에이션.png">
+                                <p>크리에이션 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> 활성화 시 창조된 에테르 소드의 수에 따라</p>
+                                <p>트리거 스킬 적중 시 <b>추가 공격</b>을 한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_임페일.png">
+                                <p>임페일 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>에테르 소드를 생성해 날리고, 사정거리 끝에 <b>에테르 결정</b>을 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_레조넌스.png">
+                                <p>레조넌스 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p>에테르 결정과 공명하여 돌진한다. 적중 시 <b>특별한 버프</b>를 획득하며,</p>
+                                <p><b>임페일과 연계할 수 있다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_2차_원더.png">
+                                <p>원더 - 액티브(온/오프)</p>
+                            </td>
+                            <td>
+                                <p><b>온/오프형 액티브 버프.</b> 공격 시 샤드가 <b>자동 생성</b>된다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_3rd" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_3rd">
+                <div>III</div>
+            </label>
+            <div class="sidebar">
+                <h2>3차 전직 - 아델</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_크로스.png">
+                                <p>크로스 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬] 아델의 3차 주력기.</b> 2자루의 장검을 생성하여 벤다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_오더.png">
+                                <p>오더 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 사출기.</b> 창조한 에테르 소드에 명령을 내려</p>
+                                <p><b>적을 추적하게 한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_게더링.png">
+                                <p>게더링 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>오더로 명령을 내린 모든 에테르 소드를 자신에게 <b>되돌아오게 한다</b>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_테리토리.png">
+                                <p>테리토리 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 설치기.</b> 수많은 검이 창조되는 영역을 생성한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_노빌리티.png">
+                                <p>노빌리티 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>영역 안에 있는 <b>파티원이 입은 피해의 일부를 대신 받고,</b></p>
+                                <p>그에 비례해 <b>실드를 생성</b>한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_3차_페더.png">
+                                <p>페더 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 후방 텔레포트기.</b> 사용시 후방으로 이동하며,</p>
+                                <p>트레드를 제외한 <b>트리거 스킬 사용 중에도 이동할 수 있다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_4th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_4th">
+                <div>IV</div>
+            </label>
+            <div class="sidebar">
+                <h2>4차 전직 - 아델</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_하이_에테르.png">
+                                <p>하이 에테르 - 패시브</p>
+                            </td>
+                            <td>
+                                <p><b>에테르의 강화 패시브. 에테르 게이지의 상한선과</b></p>
+                                <p>오더의 <b>최대 사출 수</b>가 증가한다</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_디바이드.png">
+                                <p>디바이드 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬] 아델의 4차 주력기.</b></p>
+                                <p>거대한 대검을 생성하여 전방의 적을 절단한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_블로섬.png">
+                                <p>블로섬 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>오더로 명령을 내린 <b>모든 에테르 소드를 회전시킨다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_그레이브.png">
+                                <p>그레이브 - 액티브</p>
+                            </td>
+                            <td>
+                                <p>적에게 <b>표식을 새긴다.</b> 표식이 남은 적은 <b>받는 피해가 증가</b>한다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_다이크.png">
+                                <p>다이크 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 무적기이자 피해 경감기.</b></p>
+                                <p>시전 즉시 공격을 받으면 <b>해당 피해를 막고</b>,</p>
+                                <p>이후 키다운 시 <b>받는 피해를 감소시킨다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_4차_트레드.png">
+                                <p>트레드 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>[트리거 스킬]</b> 전신에 마력을 휘감아 <b>급강하한다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_hyper" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_hyper">
+                <div>Hyper</div>
+            </label>
+            <div class="sidebar">
+                <h2>하이퍼 스킬</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_하이퍼_마커.png">
+                                <p>마커 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>광역기이자 조건부 극딜기.</b> 허공에 존재하는 작은 조각에</p>
+                                <p>마력을 불어넣어 자라게 한 후 파쇄한다.</p>
+                                <p>파쇄된 위치에는 <b>에테르 결정</b>이 생성된다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_하이퍼_스콜.png">
+                                <p>스콜 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 바인드.</b> 마력을 담은 검을 수없이 꽂아 넣어</p>
+                                <p><b>적의 움직임을 봉인한다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_하이퍼_레이스_오브_갓.png">
+                                <p>레이스 오브 갓 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p>일정 시간동안 <b>데미지가 증가한다.</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="checkbox" id="icon_5th" class="icon" name="sidebar_icons" onclick="onlyOneSidebar(this)">
+            <label for="icon_5th">
+                <div>V</div>
+            </label>
+            <div class="sidebar">
+                <h2>5차 전직</h2>
+                <input type="checkbox" name="quit_icon" id="sidebar_quit"> 
+                <label for="sidebar_quit">
+                    <span></span>
+                    <span></span>
+                </label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="skill_icon">스킬</th>
+                            <th class="skill_description">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_5차_루인.png">
+                                <p>루인 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 광역기.</b> 고대 멸망의 검을 소환하여 주변을 붕괴시킨다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_5차_인피니트.png">
+                                <p>인피니트 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 무적기 겸 극딜기.</b> 무수한 에테르 소드가 창조되는</p>
+                                <p>공간을 만든다. 스킬 시전 시와 스킬이 끝날 때 <b>잠시 무적이 된다.</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_5차_리스토어.png">
+                                <p>리스토어 - 액티브(버프)</p>
+                            </td>
+                            <td>
+                                <p><b>아델의 극딜 버프.</b> 일정 시간동안 <b>데미지와 에테르 획득량,</b></p>
+                                <p>오더로 <b>명령할 수 있는 에테르 소드의 개수</b>가 증가한다.</p>
+                                <p>또한 일정 시간마다 주변에 피해를 입힌다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="skill" src="../icons/Adele/아델_5차_스톰.png">
+                                <p>스톰 - 액티브</p>
+                            </td>
+                            <td>
+                                <p><b>오더 연계형 다수 공격기.</b> 오더로 명령을 내린 모든 에테르 소드를</p>
+                                <p>몸 주위에서 폭풍과 같이 움직이게 한다.</p>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar"></div>
+        </nav>
+        <div class="character">
+            <img src="../maple/Adele.png">
+        </div>
+        <button id="previous_page" onclick="history.back()">돌아가기</button>
+    </div>
+</body>
+</html>
