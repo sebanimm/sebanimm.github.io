@@ -1,0 +1,9 @@
+body::before {
+    background-image: url('../maple/backgroundNova.jpg');
+    background-position: center center;
+}
+
+img {
+    width:650px;
+    margin: 0 -150px 0 0;
+}

@@ -1,0 +1,5 @@
+body::before {
+    background-image: url('../maple/backgroundCannonShooter.webp');
+    background-position: center center;
+}
+

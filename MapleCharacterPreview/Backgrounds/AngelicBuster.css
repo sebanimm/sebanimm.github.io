@@ -1,0 +1,5 @@
+body::before {
+    background-image: url('../maple/backgroundAngelicBuster.png');
+    background-position: center center;
+}
+

@@ -1,0 +1,4 @@
+body::before {
+    background: url("../maple/backgroundHoYoung.jpeg");
+    background-position: center;
+}

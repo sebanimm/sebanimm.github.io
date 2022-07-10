@@ -1,0 +1,5 @@
+body::before {
+    background-image: url('../maple/backgroundEvan.jpg');
+    background-position: center bottom;
+}
+

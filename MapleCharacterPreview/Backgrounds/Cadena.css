@@ -1,0 +1,5 @@
+body::before {
+    background-image: url('../maple/backgroundCadena.jpeg');
+    background-position: center center;
+}
+
