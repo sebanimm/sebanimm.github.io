@@ -1,0 +1,585 @@
+@font-face {
+    font-family: 'hannaAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mapleBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ROKAFSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body::before {
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./maple/background.jpeg');
+    -webkit-filter: blur(10px); 
+    -moz-filter: blur(10px); 
+    -ms-filter: blur(10px); 
+    filter: blur(10px);
+    -o-filter: blur(10px); 
+    transform: scale(1.08);
+    background-repeat: no-repeat;
+    z-index: -1; 
+    content: "";
+    background-position: center center;
+}
+
+.container {
+    padding:10px 0;
+}
+
+.container > p {
+    text-align: center;
+    color:white;
+    font-size: 50px;
+    font-family: "mapleBold";
+}
+
+.container > h1 {
+    color: white;
+    text-align: center;
+    margin:0;
+    padding:5px 0 0 11.5px;
+    font-family: "hannaAir";
+}
+
+.container > h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    font-family: "ROKAFSansBold"; 
+}
+
+.character {
+    background-color: rgb(30,30,30);
+    width: 145px;
+    height: 180px;
+    margin: 8px;
+    border: 6px solid rgb(65,65,65);
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: skewX(-5deg);
+    filter: brightness(60%);
+    transition: transform .2s, filter .2s;
+}
+
+.character:hover {
+    transform: skewX(-5deg) scale(1.3);
+    z-index: 1;
+    filter: brightness(100%);
+}
+
+.image {
+    transform: skewX(5deg);
+    background-repeat: no-repeat;
+}
+
+.Adventurer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.KnightsOfCygnus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Resistance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Demon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Nova {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Ref {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Anima {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Zero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Kinesis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin:0 auto;
+    padding: 25px 0;
+    flex-direction: row;
+}
+
+.Adventurer .character:nth-child(1) .image { 
+    background-image: url("./maple/Hero.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:150%;
+    transform: scale(2) skewX(5deg);
+}
+.Adventurer .character:nth-child(2) .image { 
+    background-image: url("./maple/Paladin.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:140%;
+    transform: scale(2) skewX(5deg);
+}
+.Adventurer .character:nth-child(3) .image { 
+    background-image: url("./maple/DarkKnight.png");
+    background-size:contain;
+    background-position:right;
+    width:100%;
+    height:135%;
+    margin:0 0 0 20px;
+    transform: scale(2.5) skewX(5deg);
+
+}
+.Adventurer .character:nth-child(4) .image { 
+    background-image: url("./maple/ArchMageTC.png");
+    background-size:contain;
+    background-position:left;
+    width:72%;
+    height:110%;
+    transform: scale(2.7) skewX(5deg);
+}
+.Adventurer .character:nth-child(5) .image { 
+    background-image: url("./maple/ArchMageFP.png");
+    background-size:contain;
+    background-position:left;
+    width:85%;
+    height:125%;
+    transform: scale(2.8) skewX(5deg);
+}
+.Adventurer .character:nth-child(6) .image { 
+    background-image: url("./maple/Bishop.png");
+    background-size:contain;
+    background-position:left;
+    width:90%;
+    height:115%;
+    transform: scale(2.1) skewX(5deg);
+}
+.Adventurer .character:nth-child(7) .image { 
+    background-image: url("./maple/BowMaster.png");
+    background-size:contain;
+    background-position:left;
+    width:110%;
+    height:135%;
+    transform: scale(1.6) skewX(5deg);
+}
+.Adventurer .character:nth-child(8) .image { 
+    background-image: url("./maple/Marksman.png");
+    background-size:contain;
+    background-position:left;
+    width:110%;
+    height:100%;
+    transform: scale(2) skewX(5deg);
+}
+.Adventurer .character:nth-child(9) .image { 
+    background-image: url("./maple/Pathfinder.png");
+    background-size:contain;
+    background-position:left;
+    width:85%;
+    height:130%;
+    transform: scale(3) skewX(5deg);
+}
+.Adventurer .character:nth-child(10) .image {
+    background-image: url("./maple/NightLord.png");
+    background-size:contain;
+    background-position:left;
+    width:90%;
+    height:95%;
+    margin:0 0 0 20px;
+    transform: scale(1.88) skewX(5deg);
+}
+.Adventurer .character:nth-child(11) .image {
+    background-image: url("./maple/Shadower.png");
+    background-size:contain;
+    background-position:left;
+    width:80%;
+    height:118%;
+    margin:0 0 0 33px;
+    transform: scale(2.2) skewX(5deg);
+}
+.Adventurer .character:nth-child(12) .image {
+    background-image: url("./maple/DualBlade.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:100%;
+    transform: scale(2.3) skewX(5deg);
+}
+.Adventurer .character:nth-child(13) .image {
+    background-image: url("./maple/Captain.png");
+    background-size:contain;
+    background-position:left;
+    width:80%;
+    height:90%;
+    margin:0 0 0 28px;
+    transform: scale(2.5) skewX(5deg);
+}
+.Adventurer .character:nth-child(14) .image {
+    background-image: url("./maple/Viper.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:70%;
+    margin:20px 0 0 40px;
+    transform: scale(2) skewX(5deg);
+}
+.Adventurer .character:nth-child(15) .image {
+    background-image: url("./maple/CannonShooter.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:100%;
+    margin:20px 0 0 20px;
+    transform: scale(2.3) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(1) .image {
+    background-image: url("./maple/SoulMaster.jpg");
+    background-size:contain;
+    background-position:left;
+    width:120%;
+    height:150%;
+    transform: scale(2) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(2) .image {
+    background-image: url("./maple/FlameWizard.png");
+    background-size:contain;
+    background-position:left;
+    width:110%;
+    height:150%;
+    margin:0 0 0 14px;
+    transform: scale(2) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(3) .image {
+    background-image: url("./maple/WindBreaker.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    margin:0 0 0 24px;
+    transform: scale(3) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(4) .image {
+    background-image: url("./maple/NightWalker.png");
+    background-size:contain;
+    background-position:left;
+    width:70%;
+    height:130%;
+    transform: scale(3.6) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(5) .image {
+    background-image: url("./maple/Striker.png");
+    background-size:contain;
+    background-position:left;
+    width:105%;
+    height:130%;
+    transform: scale(1.6) skewX(5deg);
+}
+.KnightsOfCygnus .character:nth-child(6) .image {
+    background-image: url("./maple/Mikhail.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:115%;
+    margin:0 0 0 40px;
+    transform: scale(2.6) skewX(5deg);
+}
+.Resistance .character:nth-child(1) .image {
+    background-image: url("./maple/Blaster.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:120%;
+    margin:0 0 0 26px;
+    transform: scale(1.6) skewX(5deg);
+}
+.Resistance .character:nth-child(2) .image {
+    background-image: url("./maple/BattleMage.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:100%;
+    margin:0 0 0 16px;
+    transform: scale(1.8) skewX(5deg);
+}
+.Resistance .character:nth-child(3) .image {
+    background-image: url("./maple/WildHunter.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:190%;
+    margin: 0 0 0 10px;
+    transform: scale(2) skewX(5deg);
+}
+.Resistance .character:nth-child(4) .image {
+    background-image: url("./maple/Mechanic.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:150%;
+    margin: 0 0 0 6px;
+    transform: scale(2.6) skewX(5deg);
+}
+.Resistance .character:nth-child(5) .image {
+    background-image: url("./maple/Xenon.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:95%;
+    margin:5px 0 0 24px;
+    transform: scale(2) skewX(5deg);
+}
+.Demon .character:nth-child(1) .image {
+    background-image: url("./maple/DemonAvenger.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:95%;
+    margin:0 0 0 62px;
+    transform: scale(2.4) skewX(5deg);
+}
+.Demon .character:nth-child(2) .image {
+    background-image: url("./maple/DemonSlayer.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    margin:0 0 0 43px;
+    transform: scale(2.6) skewX(5deg);
+}
+.Hero .character:nth-child(1) .image {
+    background-image: url("./maple/Aran.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:145%;
+    transform: scale(2.2) skewX(5deg);
+}
+.Hero .character:nth-child(2) .image {
+    background-image: url("./maple/Evan.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:140%;
+    transform: scale(1.7) skewX(5deg);
+}
+.Hero .character:nth-child(3) .image {
+    background-image: url("./maple/Mercedes.png");
+    background-size:contain;
+    background-position:left;
+    width:76%;
+    height:130%;
+    transform: scale(2.4) skewX(5deg);
+}
+.Hero .character:nth-child(4) .image {
+    background-image: url("./maple/Phantom.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:100%;
+    margin:0 0 0 40px;
+    transform: scale(2.1) skewX(5deg);
+}
+.Hero .character:nth-child(5) .image {
+    background-image: url("./maple/Luminous.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:120%;
+    margin:0 0 0 18px;
+    transform: scale(2.2) skewX(5deg);
+}
+.Hero .character:nth-child(6) .image {
+    background-image: url("./maple/EunWol.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    margin:0 0 0 18px;
+    transform: scale(1.8) skewX(5deg);
+}
+.Nova .character:nth-child(1) .image {
+    background-image: url("./maple/Kain.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    transform: scale(1.7) skewX(5deg);
+}
+.Nova .character:nth-child(2) .image {
+    background-image: url("./maple/Cadena.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    margin: 0 0 0 8px;
+    transform: scale(1.8) skewX(5deg);
+}
+.Nova .character:nth-child(3) .image {
+    background-image: url("./maple/Kaiser.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:100%;
+    margin:0 0 0 50px;
+    transform: scale(3.3) skewX(5deg);
+}
+.Nova .character:nth-child(4) .image {
+    background-image: url("./maple/AngelicBuster.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:130%;
+    margin: 0 0 0 2px;
+    transform: scale(2.1) skewX(5deg);
+}
+.Ref .character:nth-child(1) .image {
+    background-image: url("./maple/Adele.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:152%;
+    margin:0 0 0 7px;
+    transform: scale(1.8) skewX(5deg);
+}
+.Ref .character:nth-child(2) .image {
+    background-image: url("./maple/Ark.png");
+    background-size:contain;
+    background-position:left;
+    width:60%;
+    height:130%;
+    transform: scale(2.8) skewX(5deg);
+}
+.Ref .character:nth-child(3) .image {
+    background-image: url("./maple/Illium.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:150%;
+    margin:0 0 0 38px;
+    transform: scale(2.4) skewX(5deg);
+}
+.Anima .character:nth-child(1) .image {
+    background-image: url("./maple/Lara.png");
+    background-size:contain;
+    background-position:left;
+    width:77%;
+    height:120%;
+    transform: scale(2.9) skewX(5deg);
+}
+.Anima .character:nth-child(2) .image {
+    background-image: url("./maple/HoYoung.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:140%;
+    margin:0 0 0 18px;
+    transform: scale(1.8) skewX(5deg);
+}
+.Zero .character:nth-child(1) .image {
+    background-image: url("./maple/Zero_Alpha.png"), url("./maple/Zero_Beta.png");
+    background-size:110px 110px;
+    background-position:right bottom, left top;
+    width:100%;
+    height:100%; 
+    margin:15px 0 0 5px;
+    transform: scale(1.5) skewX(5deg);
+}
+.Kinesis .character:nth-child(1) .image {
+    background-image: url("./maple/Kinesis.png");
+    background-size:contain;
+    background-position:left;
+    width:100%;
+    height:120%;
+    margin:0 0 0 2px;
+    transform: scale(2) skewX(5deg);
+}

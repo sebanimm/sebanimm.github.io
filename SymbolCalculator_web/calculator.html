@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼 계산기</title>
+    <link rel="stylesheet" href="./calculatorStyle.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <p>심볼 계산기</p>
+        <div id="box">
+            <div id="symbol_type">
+                <h2>아케인 심볼</h2>
+                <div class="symbol">
+                    <div>
+                        <label for="arcSym_1st">
+                            <img src="./image/ArcaneSymbol/VanishingJourney.png" title="아케인 심볼 : 소멸의 여로">
+                        </label>
+                        <input type="checkbox" id="arcSym_1st" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="arcSym_2nd">
+                            <img src="./image/ArcaneSymbol/ChewChewIsland.png" title="아케인 심볼 : 츄츄 아일랜드">
+                        </label>
+                        <input type="checkbox" id="arcSym_2nd" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="arcSym_3rd">
+                            <img src="./image/ArcaneSymbol/Lachelen.png" title="아케인 심볼 : 레헬른">
+                        </label>
+                        <input type="checkbox" id="arcSym_3rd" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="arcSym_4th">
+                            <img src="./image/ArcaneSymbol/Arcana.png" title="아케인 심볼 : 아르카나">
+                        </label>
+                        <input type="checkbox" id="arcSym_4th" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="arcSym_5th">
+                            <img src="./image/ArcaneSymbol/Morass.png" title="아케인 심볼 : 모라스">
+                        </label>
+                        <input type="checkbox" id="arcSym_5th" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="arcSym_6th">
+                            <img src="./image/ArcaneSymbol/Esfera.png" title="아케인 심볼 : 에스페라">
+                        </label>
+                        <input type="checkbox" id="arcSym_6th" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                </div>
+                <h2>어센틱 심볼</h2>
+                <div class="symbol">
+                    <div>
+                        <label for="autSym_1st">
+                            <img src="./image/AuthenticSymbol/Cernium.png" title="어센틱 심볼 : 세르니움">
+                        </label>
+                        <input type="checkbox" id="autSym_1st" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                    <div>
+                        <label for="autSym_2nd">
+                            <img src="./image/AuthenticSymbol/HotelArcs.png" title="어센틱 심볼 : 호텔 아르크스">
+                        </label>
+                        <input type="checkbox" id="autSym_2nd" name="symbol_check" onclick="onlyOneInput(this)"> 
+                    </div>
+                </div>
+            </div>
+            <div id="symbol_information">
+                <div class="calculate">
+                    <h2>심볼의 레벨 :</h2>
+                    <div class="input_value">
+                        <input type="number" maxlength="2" placeholder="1 ~ 20" min="1" max="20" step="1" oninput="numberMaxLength(this)">
+                    </div>
+                </div>
+                <div class="calculate">
+                    <h2>심볼의 갯수 :</h2>
+                    <div class="input_value">
+                        <input type="number" maxlength="4" placeholder="0 ~ 2679" min="0" max="2679" step="1" oninput="numberMaxLength(this)">
+                    </div>
+                </div>
+                <div class="calculate">
+                    <h2>메소 (억) :</h2>
+                    <div class="input_value">
+                        <input type="number" maxlength="3" placeholder="0 ~ 999" min="0" max="999" step="1" oninput="numberMaxLength(this)">
+                    </div>
+                </div>
+                <div class="calculate">
+                    <h2>메소 (만) :</h2>
+                    <div class="input_value">
+                        <input type="number" maxlength="4" placeholder="0 ~ 9999" min="0" max="9999" step="1" oninput="numberMaxLength(this)">
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div id="result">
+            <img src="./image/StoneSpirit.png">
+        </div>
+    </div>
+</body>
+
+</html>

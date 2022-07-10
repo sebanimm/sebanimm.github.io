@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "tmon";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body::before {
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./image/background.jpg');
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    transform: scale(1.08);
+    background-repeat: no-repeat;
+    z-index: -1;
+    content: "";
+    background-position: center center;
+}
+
+h2 {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 36px;
+    font-family: "nanum";
+}
+
+img {
+    height: 50px;
+    width: 50px;   
+    transition: .1s;
+}
+
+label {
+    cursor: pointer;
+}
+
+label:active > img{
+    transform: scale(1.2);
+}
+
+#container > p {
+    -webkit-text-stroke: 3px black;
+    text-align: center;
+    color: white;
+    font-size: 90px;
+    font-family: "tmon";
+}
+
+#box {
+    margin:0 auto;
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#symbol_type {
+    width: 590px;
+    height: 350px;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+#symbol_type > h2 {
+    margin: 27px 0;
+}
+
+#symbol_information {
+    width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+.symbol {
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.calculate {
+    display: flex;
+    justify-content:space-between;
+    width: 500px;
+    margin: auto;
+}
+
+.calculate > h2{
+    font-size: 32px;
+    margin: auto 0;
+}
+
+.input_value {
+    margin: 26.5px 0 31px 0;
+    width: 140px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+input[type="number"] {
+    border-radius: 5px;
+    padding:4px 1px 2px 1px;
+    width: 140px;
+    height: 30px;
+    font-family: "nanum";
+    -moz-appearance: textfield;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 24px;
+    color: #202030;
+}
