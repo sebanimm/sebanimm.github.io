@@ -117,11 +117,11 @@ label:active > img{
     background-size: cover;
     width: 183px;
     height: 196.5px;
-    transition: .075s;
+    transition: 0.05s;
 }
 
 #box_result > .result_icon:active {
-    transform: scale(1.2);
+    transform: scale(1.05);
     background-image: url("./image/StoneSpirit_active.png");
     z-index: 3;
 }
