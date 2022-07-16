@@ -31,29 +31,49 @@ function getValue(checkbox) {
 
 // 심볼 계산하는 함수
 function symbolCalculate() {
+    // err : 오류 검사용
     let err = 0;
 
-    let symLv = document.getElementById("level-input").value;
-    let userMeso10K = document.getElementById("meso-input-10K").value;
+    // userSymLv : 유저가 가진(입력한) 심볼의 레벨
+    let userSymLv = document.getElementById("level-input").value;
+    // userMeso100M : 유저가 가진(입력한) 메소 (단위 : 억)
     let userMeso100M = document.getElementById("meso-input-100M").value;
+    // userMeso10K : 유저가 가진(입력한) 메소 (단위 : 만)
+    let userMeso10K = document.getElementById("meso-input-10K").value;
+    // userSymNumber : 유저가 가진(입력한) 심볼의 갯수
     let userSymNumber = document.getElementById("number-input").value;
+
+    // defaultMeso : 심볼 레벨업때 필요한 메소 (기본)
+    // needMeso : 만렙까지 드는 메소
+    // needMeso100M : 만렙까지 드는 메소 (단위 : 억)
+    // needMeso10K : 만렙까지 드는 메소 (단위 : 만)
+    // lvUpMeso : 심볼 레벨업 할 때 마다 늘어나는 메소
+    // maxLvMeso : 심볼 1렙에서 만렙까지 드는 총 메소 (고정값)
+    // needMesoTotal : 유저의 심볼 레벨에서 만렙까지 드는 메소의 총합 (억 + 만)
+    // userMesoTotal : 유저가 가진(입력한) 메소의 총합 (억 + 만)
+    // resultMeso100M : 최종적으로 더 필요한 메소 (단위 : 억) -> (필요 메소) - (유저의 메소) 
+    // resultMeso10K : 최종적으로 더 필요한 메소 (단위 : 만) 
+    // resultMesoTotal : 최종적으로 더 필요한 메소의 총합 (억 + 만) 
+    // overMeso100M : 유저가 가진(입력한) 메소가 필요한 메소보다 더 많을때의 초과 메소 (단위 : 억)
+    // overMeso10K : 유저가 가진(입력한) 메소가 필요한 메소보다 더 많을때의 초과 메소 (단위 : 만)
+    // overMesoTotal : 유저가 가진(입력한) 메소가 필요한 메소보다 더 많을때의 초과 메소의 총합 (억 + 만)
+    
+    let needMeso = 0;
+    let needMeso100M = 0;
+    let needMeso10K = 0;
 
     // 소멸의 여로 심볼 업그레이드 비용
     function firstArcSymNeedMeso() {
-        let defaultMeso = 3110000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const lvUpMeso = 3960000;
-        const maxLvMeso = 811490000;
+        const defaultMeso = 3_110_000;
+        const lvUpMeso = 3_960_000 + defaultMeso;
+        const maxLvMeso = 811_490_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -94,7 +114,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+            result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -105,20 +129,16 @@ function symbolCalculate() {
 
     // 츄츄 아일랜드 심볼 업그레이드 비용
     function secondArcSymNeedMeso() {
-        let defaultMeso = 6220000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const lvUpMeso = 4620000;
-        const maxLvMeso = 995980000;
+        const defaultMeso = 6_220_000;
+        const lvUpMeso = 4_620_000 + defaultMeso;
+        const maxLvMeso = 995_980_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -159,7 +179,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -170,20 +194,16 @@ function symbolCalculate() {
 
     // 레헬른 심볼 업그레이드 비용
     function thirdArcSymNeedMeso() {
-        let defaultMeso = 9330000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const lvUpMeso = 5280000;
-        const maxLvMeso = 1180470000;
+        const defaultMeso = 9_330_000;
+        const lvUpMeso = 5_280_000 + defaultMeso;
+        const maxLvMeso = 1_180_470_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -224,7 +244,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -235,20 +259,16 @@ function symbolCalculate() {
 
     // 아르카나 ~ 에스페라 심볼 업그레이드 비용
     function otherArcSymsNeedMeso() {
-        let defaultMeso = 11196000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const maxLvMeso = 1341324000;
-        const lvUpMeso = 5940000;
+        const defaultMeso = 11_196_000;
+        const maxLvMeso = 1_341_324_000 + defaultMeso;
+        const lvUpMeso = 59_40_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -289,7 +309,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -300,20 +324,16 @@ function symbolCalculate() {
 
     // 세르니움 심볼 업그레이드 비용
     function firstAutSymNeedMeso() {
-        let defaultMeso = 96900000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const lvUpMeso = 88500000;
-        const maxLvMeso = 5836500000;
+        const defaultMeso = 96_900_000;
+        const maxLvMeso = 5_836_500_000 + defaultMeso;
+        const lvUpMeso = 88_500_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -354,7 +374,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -365,20 +389,16 @@ function symbolCalculate() {
 
     // 호텔 아르크스 심볼 업그레이드 비용
     function secondAutSymNeedMeso() {
-        let defaultMeso = 106600000;
-        let needMeso = 0;
-        let needMeso100M = 0;
-        let needMeso10K = 0;
-        const lvUpMeso = 97300000;
-        const maxLvMeso = 6417500000;
+        const defaultMeso = 106_600_000;
+        const maxLvMeso = 6_417_500_000 + defaultMeso;
+        const lvUpMeso = 97_300_000;
 
-        for (let i = 1; i < symLv; i++) {
-            defaultMeso += lvUpMeso;
-            needMeso += defaultMeso;
+        for (let i = 1; i < userSymLv; i++) {
+            needMeso += lvUpMeso;
         }
 
         needMeso = maxLvMeso - needMeso;
-        needMeso100M = Math.floor(needMeso / 100000000);
+        needMeso100M = Math.floor(needMeso / 100_000_000);
         needMeso10K = Math.floor(needMeso / 10000 - needMeso100M * 10000);
 
         if (needMeso10K < 0) {
@@ -419,7 +439,11 @@ function symbolCalculate() {
         } else if (resultMesoTotal === 0) {
             result.innerText = `메소는 딱 남아 떨어진담!`;
         } else {
-            result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            if (overMeso100M === 0) {
+                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            } else {
+                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+            }
         }
         
         if (userMesoTotal < 0) {
@@ -434,7 +458,7 @@ function symbolCalculate() {
     function arcSymNeedNumber() {
         const maxSymNumber = 2679;
 
-        for (let i = 1; i < symLv; i++) {
+        for (let i = 1; i < userSymLv; i++) {
             needSymNumber = needSymNumber + (i ** 2 + 11);
         }
 
@@ -447,8 +471,8 @@ function symbolCalculate() {
         const numberResult = document.getElementById("result-number");
         const mesoResult = document.getElementById("result-meso");
 
-        if (symLv <= 0 || symLv >= 20) {
-            if (symLv <= 0) {
+        if (userSymLv <= 0 || userSymLv >= 20) {
+            if (userSymLv <= 0) {
                 mesoResult.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
                 numberResult.innerText = ``;
             } else {
@@ -473,7 +497,7 @@ function symbolCalculate() {
     function autSymNeedNumber() {
         const maxSymNumber = 4565;
 
-        for (let i = 1; i < symLv; i++) {
+        for (let i = 1; i < userSymLv; i++) {
             needSymNumber = needSymNumber + (9 * i ** 2 + 20 * i);
         }
 
@@ -486,8 +510,8 @@ function symbolCalculate() {
         const numberResult = document.getElementById("result-number");
         const mesoResult = document.getElementById("result-meso");
 
-        if (symLv <= 0 || symLv >= 11) {
-            if (symLv <= 0) {
+        if (userSymLv <= 0 || userSymLv >= 11) {
+            if (userSymLv <= 0) {
                 mesoResult.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
                 numberResult.innerText = ``;
             } else {
