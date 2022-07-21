@@ -37,14 +37,14 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-filter: blur(10px); 
-    -moz-filter: blur(10px); 
-    -o-filter: blur(10px); 
-    -ms-filter: blur(10px); 
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
     filter: blur(10px);
     transform: scale(1.08);
     background-repeat: no-repeat;
-    z-index: -10; 
+    z-index: -10;
     content: "";
 }
 
@@ -64,7 +64,7 @@ body::before {
 .sidebar {
     background: black;
     position: fixed;
-    width:950px;
+    width: 950px;
     top: 0;
     height: 100vh;
     left: -873px;
@@ -78,7 +78,7 @@ body::before {
     height: 32px;
     width: 32px;
     display: block;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
 .skill_icon {
@@ -93,6 +93,18 @@ body::before {
     height: 50px;
     background-color: white;
     font-family: "nanum";
+}
+
+.skill-bundle {
+    width: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.skill-bundle+p {
+    margin: 0;
 }
 
 img {
@@ -115,13 +127,13 @@ p {
 }
 
 nav {
-    float:left;
+    float: left;
     position: fixed;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 100%;
-    width:80px;
+    width: 80px;
 }
 
 label {
@@ -130,10 +142,10 @@ label {
     z-index: 15;
 }
 
-label > div {
+label>div {
     font-family: "maplebold";
     font-size: 18px;
-    text-align: center;    
+    text-align: center;
 }
 
 table {
@@ -147,21 +159,22 @@ td {
     height: 120px;
 }
 
-td > p {
+td>p {
     font-size: 14px;
     color: black;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 24px;
 }
 
-.skill + p {
+.skill+p {
     margin: 0;
 }
 
 .icon {
     display: none;
 }
-.icon:checked + label {
+
+.icon:checked+label {
     z-index: 16;
     width: 80px;
     height: 22px;
@@ -169,11 +182,13 @@ td > p {
     cursor: pointer;
     display: block;
 }
-.icon:checked + label + div {
+
+.icon:checked+label+div {
     left: 80px;
     background-color: black;
 }
-.icon + label + div {
+
+.icon+label+div {
     background: black;
 }
 
@@ -181,7 +196,7 @@ td > p {
     display: none;
 }
 
-#sidebar_quit + label {
+#sidebar_quit+label {
     display: block;
     width: 60px;
     height: 40px;
@@ -192,7 +207,7 @@ td > p {
     transition: .2s;
 }
 
-#sidebar_quit + label span {
+#sidebar_quit+label span {
     display: block;
     position: absolute;
     width: 100%;
@@ -201,17 +216,17 @@ td > p {
     background-color: white;
 }
 
-#sidebar_quit + label span:nth-child(1) {
+#sidebar_quit+label span:nth-child(1) {
     top: 50%;
-    transform:translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 
-#sidebar_quit + label span:nth-child(2) {
+#sidebar_quit+label span:nth-child(2) {
     bottom: 50%;
-    transform:translateY(50%) rotate(-45deg);
+    transform: translateY(50%) rotate(-45deg);
 }
 
-#sidebar_quit + label:active {
+#sidebar_quit+label:active {
     transform: scale(1.3);
 }
 
@@ -230,7 +245,7 @@ td > p {
     color: #534f4f;
     left: 88%;
     top: 88%;
-    box-shadow: 0 15px 35px rgba(0, 0, 0,10);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 10);
     transition: 0.22s;
 }
 
