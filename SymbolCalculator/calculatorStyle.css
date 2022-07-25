@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mapleLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body::before {
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./image/background.jpg');
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    transform: scale(1.08);
+    background-repeat: no-repeat;
+    z-index: -1;
+    content: "";
+    background-position: center center;
+}
+
+h2 {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 30px;
+    font-family: "nanum";
+}
+
+label {
+    cursor: pointer;
+}
+
+label:active > img{
+    transform: scale(1.2);
+}
+
+#container > p {
+    text-align: center;
+    color: #C7FA77;
+    font-size: 50px;
+    font-family: "GangwonEduPowerExtraBoldA";
+}
+
+#box-main {
+    margin:0 auto;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#uncheck-icon {
+    display: none;
+}
+
+#uncheck-icon + label {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+    left: 88%;
+    top: -12.5%;
+}
+
+#symbol-type {
+    width: 540px;
+    height: 315px;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-bottom: 20px;
+}
+
+#symbol-type > h2 {
+    margin: 27px 0;
+}
+
+#symbol-information {
+    width: 540px;
+    height: 315px;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-bottom: 20px;
+}
+
+#box-result {
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 680px;
+    height: 161px;
+}
+
+#box-result > .result-icon {
+    cursor: pointer;
+    margin: 15px 0;
+    display: inline-block;
+    background-image: url("./image/StoneSpirit.png");
+    background-size: cover;
+    width: 122px;
+    height: 131px;
+    transition: 0.05s;
+}
+
+#box-result > .result-icon:active {
+    transform: scale(1.05);
+    background-image: url("./image/StoneSpirit_active.png");
+    z-index: 3;
+}
+
+#result {
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#result > p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 28px;
+    font-family: "mapleLight";
+}
+
+.arc {
+    width: 40px;
+    height: 40px;
+    transition: .1s;
+}
+
+.aut {
+    width: 46px;
+    height: 46px;
+    transition: .1s;
+}
+
+.symbol {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.calculate {
+    display: flex;
+    justify-content:space-between;
+    width: 480px;
+    height: 78.75px;
+    margin: auto;
+}
+
+.calculate > h2{
+    font-size: 26px;
+    margin: auto 0;
+}
+
+.input-value {
+    margin: 21px 0 30px 0;
+    width: 140px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+input[type="number"] {
+    border-radius: 5px;
+    padding:4px 1px 2px 9px;
+    width: 140px;
+    height: 30px;
+    font-family: "nanum";
+    -moz-appearance: textfield;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 24px;
+    color: #202030;
+}
