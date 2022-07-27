@@ -136,7 +136,7 @@ label:active > img{
 }
 
 #result {
-    width: 480px;
+    width: 580px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
