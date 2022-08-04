@@ -1,3 +1,28 @@
+const openModalButtons = document.querySelector(".result-icon");
+const closeModalButtons = document.querySelector("#close");
+const overlay = document.getElementById("overlay");
+const modal = document.querySelector(".modal");
+
+const mesoError = document.getElementById("error-1");
+const symbolLvError = document.getElementById("error-2");
+const symbolNumError = document.getElementById("error-3");
+
+function openModal() {
+    if (modal == null) {
+        return;
+    }
+    modal.classList.add("active");
+    overlay.classList.add("active");
+}
+
+function closeModal() {
+    if (modal == null) {
+        return;
+    }
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+}
+
 // 심볼 체크 한개만 되도록 하는 함수
 function onlyOneInput(input) {
     const checkboxes = document.getElementsByName("symbol-check");
@@ -31,9 +56,11 @@ function getValue(checkbox) {
 
 // 심볼 계산하는 함수
 function symbolCalculate() {
-    // err : 오류 검사용
-    let err = 0;
+    let errorCheck = 0;
 
+    symbolLvError.innerText = ``;
+    symbolNumError.innerText = ``;
+    mesoError.innerText = ``;
     // userSymLv : 유저가 가진(입력한) 심볼의 레벨
     let userSymLv = document.getElementById("level-input").value;
     // userMeso100M : 유저가 가진(입력한) 메소 (단위 : 억)
@@ -101,29 +128,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -166,29 +192,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -231,29 +256,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -296,29 +320,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -361,29 +384,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -426,29 +448,28 @@ function symbolCalculate() {
             overMeso100M = -overMeso100M;
         }
 
-        document.querySelector("#result > p:first-child").id = "result-meso";
-
         const result = document.getElementById("result-meso");
 
-        if (resultMesoTotal > 0) {
-            if (resultMeso100M > 0) {
-                result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
-            } else {
-                result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
-            }
-        } else if (resultMesoTotal === 0) {
-            result.innerText = `메소는 딱 남아 떨어진담!`;
+        if (userMesoTotal < 0 || userMeso10K < 0) {
+            errorCheck += 1;
+            mesoError.innerText = `메소는 음수가 될 수 없담!`;
+            openModal();
         } else {
-            if (overMeso100M === 0) {
-                result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+            if (resultMesoTotal > 0) {
+                if (resultMeso100M > 0) {
+                    result.innerText = `더 필요한 메소는 ${resultMeso100M}억 ${resultMeso10K}만 메소담!`;
+                } else {
+                    result.innerText = `더 필요한 메소는 ${resultMeso10K}만 메소담!`;
+                }
+            } else if (resultMesoTotal === 0) {
+                result.innerText = `메소는 딱 남아 떨어진담!`;
             } else {
-                result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                if (overMeso100M === 0) {
+                    result.innerText = `메소는 충분히 많담! ${overMeso10K}만 메소나 남는담!`;
+                } else {
+                    result.innerText = `메소는 충분히 많담! ${overMeso100M}억 ${overMeso10K}만 메소나 남는담!`;
+                }
             }
-        }
-
-        if (userMesoTotal < 0) {
-            result.innerText = `메소는 음수가 될 수 없담!`;
-            err = 1;
         }
     }
 
@@ -466,18 +487,16 @@ function symbolCalculate() {
 
         needSymNumber = maxSymNumber - needSymNumber - userSymNumber;
 
-        document.querySelector("#result > p:last-child").id = "result-number";
-
         const numberResult = document.getElementById("result-number");
-        const mesoResult = document.getElementById("result-meso");
 
         if (userSymLv <= 0 || userSymLv >= 20) {
+            errorCheck += 1;
             if (userSymLv <= 0) {
-                mesoResult.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
-                numberResult.innerText = ``;
+                symbolLvError.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
+                openModal();
             } else {
-                mesoResult.innerText = `아케인 심볼은 20레벨이 최대 레벨이담!`;
-                numberResult.innerText = ``;
+                symbolLvError.innerText = `아케인 심볼은 20레벨이 최대 레벨이담!`;
+                openModal();
             }
         } else if (needSymNumber > 0) {
             numberResult.innerText = `더 필요한 심볼의 갯수는 ${needSymNumber}개담!`;
@@ -488,8 +507,9 @@ function symbolCalculate() {
         }
 
         if (userSymNumber < 0) {
-            numberResult.innerText = ``;
-            mesoResult.innerText = `심볼의 갯수는 음수가 될 수 없담!`;
+            errorCheck += 1;
+            symbolNumError.innerText = `심볼의 갯수는 음수가 될 수 없담!`;
+            openModal();
         }
     }
 
@@ -505,18 +525,16 @@ function symbolCalculate() {
 
         needSymNumber = maxSymNumber - needSymNumber - userSymNumber;
 
-        document.querySelector("#result > p:last-child").id = "result-number";
-
         const numberResult = document.getElementById("result-number");
-        const mesoResult = document.getElementById("result-meso");
 
         if (userSymLv <= 0 || userSymLv >= 11) {
+            errorCheck += 1;
             if (userSymLv <= 0) {
-                mesoResult.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
-                numberResult.innerText = ``;
+                symbolLvError.innerText = `심볼의 레벨은 음수나 0이 될 수 없담!`;
+                openModal();
             } else {
-                mesoResult.innerText = `어센틱 심볼은 11레벨이 최대 레벨이담!`;
-                numberResult.innerText = ``;
+                symbolLvError.innerText = `어센틱 심볼은 11레벨이 최대 레벨이담!`;
+                openModal();
             }
         } else if (needSymNumber > 0) {
             numberResult.innerText = `더 필요한 심볼의 갯수는 ${needSymNumber}개담!`;
@@ -527,8 +545,9 @@ function symbolCalculate() {
         }
 
         if (userSymNumber < 0) {
-            mesoResult.innerText = `심볼의 갯수는 음수가 될 수 없담!`;
-            numberResult.innerText = ``;
+            errorCheck += 1;
+            symbolNumError.innerText = `심볼의 갯수는 음수가 될 수 없담!`;
+            openModal();
         }
     }
 
@@ -554,21 +573,16 @@ function symbolCalculate() {
 
         autSymNeedNumber();
     } else {
-        document.querySelector("#result > p:first-child").id = "result-meso";
-        document.querySelector("#result > p:last-child").id = "result-number";
-
-        const mesoResult = document.getElementById("result-meso");
-        const numberResult = document.getElementById("result-number");
-
-        mesoResult.innerText = `아직 심볼을 선택하지 않았담!`;
-        numberResult.innerText = ``;
+        symbolLvError.innerText = `아직 심볼을 선택하지 않았담!`;
+        openModal();
+        errorCheck += 1;
     }
 
-    if (err === 1) {
-        document.querySelector("#result > p:last-child").id = "result-number";
-
+    if (errorCheck !== 0) {
         const numberResult = document.getElementById("result-number");
+        const mesoResult = document.getElementById("result-meso");
 
         numberResult.innerText = ``;
+        mesoResult.innerText = ``;
     }
 }
