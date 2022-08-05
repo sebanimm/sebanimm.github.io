@@ -582,7 +582,7 @@ function symbolCalculate() {
         const numberResult = document.getElementById("result-number");
         const mesoResult = document.getElementById("result-meso");
 
-        numberResult.innerText = ``;
+        numberResult.innerText = `오류가 발생했담! 다시 선택해 줘람!`;
         mesoResult.innerText = ``;
     }
 }
