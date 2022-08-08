@@ -21,12 +21,18 @@ h2 {
     color: white;
 }
 
-#MCP {
+.project {
     margin: auto;
+}
+
+#MCP {
     width: 554px;
 }
 
 #SymCal {
-    margin: auto;
     width: 218px;
+}
+
+#Mapleworldcup {
+    width: 514px;
 }

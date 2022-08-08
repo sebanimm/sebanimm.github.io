@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메이플스토리 캐릭터 월드컵</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="title">
+            <h2>메이플스토리 캐릭터 월드컵</h2>
+        </div>
+        <div id="content">
+            <div id="left" class="img"></div>
+            <div id="right" class="img"></div>
+        </div>
+    </div>
+    <div id="overlay">
+        <div class="modal">
+            <h2>메이플스토리 캐릭터 월드컵</h2>
+            <p>가장 마음에 드는 메이플스토리의 캐릭터를 골라주세요!</p>
+            <p id="description">64명의 후보 중 무작위 64명이 대결합니다.</p>
+            <div id="modal-input">
+                <div class="select-box">
+                    <div class="options-container">
+                        <div class="option" id="64" onclick="getRound(this)">
+                            <input type="checkbox" class="category" id="round-of-64">
+                            <label for="round-of-64">64강</label>
+                        </div>
+                        <div class="option" id="32" onclick="getRound(this)">
+                            <input type="checkbox" class="category" id="round-of-32">
+                            <label for="round-of-32">32강</label>
+                        </div>
+                        <div class="option" id="16" onclick="getRound(this)">
+                            <input type="checkbox" class="category" id="round-of-16">
+                            <label for="round-of-16">16강</label>
+                        </div>
+                        <div class="option" id="8" onclick="getRound(this)">
+                            <input type="checkbox" class="category" id="round-of-8">
+                            <label for="round-of-8">8강</label>
+                        </div>
+                        <div class="option" id="4" onclick="getRound(this)">
+                            <input type="checkbox" class="category" id="round-of-4">
+                            <label for="round-of-4">4강</label>
+                        </div>
+                    </div>
+                    <div class="selected">64강</div>
+                </div>
+                <button class="start" onclick="randomImage()">시작하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

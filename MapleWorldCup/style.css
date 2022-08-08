@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 28px;
+    font-family: 'yg-jalnan';
+    font-size: 44px;
+}
+
+p {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 22px;
+}
+
+.start {
+    transform: none;
+    transition: none;
+    height: 36px;
+    width: 100px;
+    margin: 0;
+    background: #2f3640;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 18px;
+    padding-top: 2.8px;
+    cursor: pointer;
+}
+
+.start:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    background-color: black;
+    color: white;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > h2 {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    padding-bottom: 0.7vh;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.modal {
+    background-color: white;
+    width: 650px;
+    height: 301px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.modal > p {
+    text-align: center;
+}
+
+.select-box {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.select-box .options-container {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    margin: 0;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("images/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 4px;
+    top: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -2px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    padding: 11px 0px 7px 10px;
+    cursor: pointer;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .category {
+    display: none;
+}
+
+.fade-out {
+    z-index: -1;
+}
+
+#modal-input {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#description {
+    margin-top: 42px;
+    margin-bottom: 16px;
+}
+
+.img {
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#content {
+    height: 88vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(34, 34, 36);
+}
