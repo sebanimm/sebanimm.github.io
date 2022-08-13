@@ -14,6 +14,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 img {
@@ -40,11 +41,11 @@ input {
 }
 
 #clock {
-  padding-top: 0.8em;
+  padding-top: 0.6em;
   margin-bottom: 0.4em;
   text-align: center;
   font-family: "MICEGothic Bold";
-  font-size: 14em;
+  font-size: 10em;
 }
 
 #greeting {
@@ -55,6 +56,7 @@ input {
 }
 
 #quote {
+  width: 60vw;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -77,6 +79,31 @@ input {
 #todo-form {
   width: 37vw;
   margin: 0 auto;
+}
+
+#login-form {
+  font-family: "MICEGothic Bold";
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 4em;
+  width: 50vw;
+}
+
+#login-form input {
+  font-family: "MICEGothic Bold";
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+
+#login-form input:first-child {
+  width: 80%;
+  margin-right: 20px;
+}
+
+#login-form input:first-child::placeholder {
+  color: black;
+  font-weight: bold;
 }
 
 #todo-form > input {
