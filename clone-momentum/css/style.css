@@ -115,7 +115,6 @@ input {
 #weather > span {
   font-size: 20px;
   text-align: center;
-  display: block;
   font-family: "MICEGothic Bold";
 }
 
