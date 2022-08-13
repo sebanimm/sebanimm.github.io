@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "MICEGothic Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+input {
+  text-align: center;
+  outline: none;
+  border: 0;
+  background: 0;
+  border-bottom: 2px solid black;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#clock {
+  padding-top: 0.8em;
+  margin-bottom: 0.4em;
+  text-align: center;
+  font-family: "MICEGothic Bold";
+  font-size: 14em;
+}
+
+#greeting {
+  font-family: "MICEGothic Bold";
+  text-align: center;
+  font-size: 4.6em;
+  margin-bottom: 0.8em;
+}
+
+#quote {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#quote > span {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  font-family: "MICEGothic Bold";
+}
+
+#focus {
+  text-align: center;
+  font-family: "MICEGothic Bold";
+  margin-bottom: 0.2em;
+}
+
+#todo-form {
+  width: 37vw;
+  margin: 0 auto;
+}
+
+#todo-form > input {
+  font-size: 2.25em;
+  width: 100%;
+  font-family: "MICEGothic Bold";
+}
+
+#weather > span {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  font-family: "MICEGothic Bold";
+}
+
+#quote > span:first-child {
+  margin-bottom: 10px;
+}
+
+#todo-list > li {
+  text-align: center;
+}
+
+#todo-list > li > span {
+  font-size: 2.4em;
+  font-family: "MICEGothic Bold";
+  margin-right: 12px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#todo-list > li > button {
+  background: none;
+  border: 0;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: "MICEGothic Bold";
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
