@@ -1,42 +1,1771 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <title>사밀</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <script
+      src="https://kit.fontawesome.com/90e1d9758f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animate.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>나의 웹페이지들</h1>
-      <div>
-        <div id="MCP" class="project">
-          <h2
-            onclick="window.open('./MapleCharacterPreview/CharacterPreview.html')"
-          >
-            메이플스토리 캐릭터 미리보기
-          </h2>
+    <div id="container">
+      <div class="top-menu">
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#my-skills">My Skills</a></li>
+          <li><a href="#what-i-did">What I Did</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+      </div>
+      <div class="start-container">
+        <h1 class="wow fadeInUp">안녕하세요!</h1>
+        <div class="start wow fadeInUp">
+          <h1>저는 <span class="auto-type"></span></h1>
         </div>
-        <div id="SymCal" class="project">
-          <h2 onclick="window.open('./SymbolCalculator/calculator.html')">
-            심볼 계산기
-          </h2>
+        <h2 class="wow fadeInUp">한예준 입니다.</h2>
+      </div>
+      <div id="about-me" class="page">
+        <h1 class="wow fadeInUp">저 한예준은</h1>
+        <p class="wow fadeInUp" style="animation-delay: 0.5s">
+          무슨 일이던지 최선을 다 하려 합니다.
+        </p>
+        <p class="wow fadeInUp" style="animation-delay: 1s">
+          만약 무엇이든 꽃히게 된다면, 기어코 해내고 맙니다.
+        </p>
+        <p class="wow fadeInUp" style="animation-delay: 1.5s">
+          크고 작은 목표들을 정해 꾸준히 하나하나 성취해냅니다.
+        </p>
+        <p class="wow fadeInUp" style="animation-delay: 2s">
+          항상 배움과 새로움을 추구합니다.
+        </p>
+      </div>
+      <div id="my-skills" class="page">
+        <h1 class="wow fadeInUp">
+          제가 사용할 수 있는 기술, 그리고 배우고 있는 기술 입니다.
+        </h1>
+        <h2 id="tech-stack" class="wow fadeInUp"><span>Tech Stack</span></h2>
+        <div>
+          <img class="wow fadeInUp" src="images/css.svg" alt="css" />
+          <img class="wow fadeInUp" src="images/js.svg" alt="js" />
+          <img class="wow fadeInUp" src="images/python.webp" alt="python" />
+          <img class="wow fadeInUp" src="images/c.svg" alt="c" />
         </div>
-        <div id="Mapleworldcup" class="project">
-          <h2 onclick="window.open('./Mapleworldcup/worldCup.html')">
-            메이플스토리 캐릭터 월드컵
-          </h2>
-        </div>
-        <div id="momentum" class="project">
-          <h2 onclick="window.open('./clone-momentum/index.html')">
-            momentum 클론코딩
-          </h2>
-        </div>
-        <div id="movie-app" class="project">
-          <h2 onclick="window.open('https://sebanimm.github.io/movie-app')">
-            ReactJS로 만든 영화 웹
-          </h2>
+        <h2 id="learning" class="wow fadeInUp"><span>Learning</span></h2>
+        <div>
+          <img class="wow fadeInUp" src="images/react.svg" alt="react" />
+          <img class="wow fadeInUp" src="images/ts.png" alt="typescript" />
         </div>
       </div>
+      <div id="what-i-did" class="page">
+        <h1 class="wow fadeInUp">
+          그동안 공부를 해 오며 만든 저만의 웹페이지들 입니다.
+        </h1>
+        <div id="webs">
+          <p
+            class="wow fadeInUp"
+            style="animation-delay: 0.8s"
+            onclick="window.open('https://sebanimm.github.io/MapleCharacterPreview/CharacterPreview.html')"
+          >
+            메이플스토리 캐릭터 미리보기
+          </p>
+          <p
+            class="wow fadeInUp"
+            style="animation-delay: 0.8s"
+            onclick="window.open('https://sebanimm.github.io/SymbolCalculator/calculator.html')"
+          >
+            심볼 계산기
+          </p>
+          <p
+            class="wow fadeInUp"
+            style="animation-delay: 0.8s"
+            onclick="window.open('https://sebanimm.github.io/clone-momentum/index.html')"
+          >
+            momentum 클론코딩
+          </p>
+          <p
+            class="wow fadeInUp"
+            style="animation-delay: 0.8s"
+            onclick="window.open('https://sebanimm.github.io/movie-app')"
+          >
+            React.JS로 만든 영화 서비스
+          </p>
+        </div>
+      </div>
+      <!-- <div id="contact" class="page">
+        <h1 class="wow fadeInUp">사밀</h1>
+      </div> -->
+      <section id="bg">
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <i class="fa-solid fa-pager"></i>
+            <i class="fa-solid fa-bug"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-folder-open"></i>
+            <i class="fa-solid fa-code-fork"></i>
+            <i class="fa-solid fa-file-code"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-code-compare"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-gears"></i>
+            <i class="fa-solid fa-code-pull-request"></i>
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+        </div>
+      </section>
+      <div
+        class="icon"
+        id="github"
+        onclick="window.open('https://github.com/sebanimm')"
+      >
+        <i class="fa-brands fa-square-github"></i>
+      </div>
+      <div
+        class="icon"
+        id="insta"
+        onclick="window.open('https://www.instagram.com/sebanim_/')"
+      >
+        <i class="fa-brands fa-square-instagram"></i>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+    <script src="wow.min.js"></script>
+    <script>
+      var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animated", // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+      });
+      wow.init();
+    </script>
   </body>
 </html>
