@@ -9,8 +9,13 @@
       src="https://kit.fontawesome.com/90e1d9758f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -65,7 +70,40 @@
         <h1 class="wow fadeInUp">
           그동안 공부를 해 오며 만든 저만의 웹페이지들 입니다.
         </h1>
-        <div id="webs">
+        <section>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                onclick="window.open('https://sebanimm.github.io/MapleCharacterPreview/CharacterPreview.html')"
+              >
+                메이플스토리 캐릭터 미리보기
+              </div>
+              <div
+                class="swiper-slide"
+                onclick="window.open('https://sebanimm.github.io/SymbolCalculator/calculator.html')"
+              >
+                심볼 계산기
+              </div>
+              <div
+                class="swiper-slide"
+                onclick="window.open('https://sebanimm.github.io/clone-momentum/index.html')"
+              >
+                momentum 클론코딩
+              </div>
+              <div
+                class="swiper-slide"
+                onclick="window.open('https://sebanimm.github.io/movie-app')"
+              >
+                React.js로 만든 영화 웹
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!--<div id="webs">
           <p
             class="wow fadeInUp"
             style="animation-delay: 0.8s"
@@ -94,7 +132,7 @@
           >
             React.JS로 만든 영화 서비스
           </p>
-        </div>
+        </div>-->
       </div>
       <!-- <div id="contact" class="page">
         <h1 class="wow fadeInUp">사밀</h1>
@@ -1749,8 +1787,9 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
-    <script src="wow.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slider.js"></script>
     <script>
       var wow = new WOW({
         boxClass: "wow", // animated element css class (default is wow)
