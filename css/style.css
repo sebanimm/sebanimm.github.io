@@ -409,3 +409,8 @@ img[alt="react"] {
   font-size: 30px;
   cursor: pointer;
 }
+
+img[src="images/trophy-solid.svg"] {
+  padding-top: 20px;
+  height: 130px;
+}
